@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Buttons" subtitle="Pill actions — primary, accent (urgency), outline, ghost" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);padding:26px;font-family:var(--font-body)}
+.set{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
+.dark{background:var(--surface-navy);border-radius:var(--radius-md);padding:18px}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);width:100%;margin-bottom:2px}</style></head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Button } = window.ToiletPlusDesignSystem_5215f9;
+const Ic = ({n,s=18}) => { const r=React.useRef(); React.useEffect(()=>{const node=lucide.icons?.[n]||lucide[n];if(!node||!r.current)return;const svg=lucide.createElement(node);svg.setAttribute('width',s);svg.setAttribute('height',s);r.current.innerHTML='';r.current.appendChild(svg);},[]); return <span ref={r} style={{display:'flex'}}/>; };
+function Demo(){
+  return (<>
+    <div className="set"><span className="lbl">Variants</span>
+      <Button variant="primary">Book a plumber</Button>
+      <Button variant="accent" iconLeft={<Ic n="Phone"/>}>Call 24/7</Button>
+      <Button variant="navy">Get a quote</Button>
+      <Button variant="outline">All services</Button>
+      <Button variant="ghost">Learn more</Button>
+    </div>
+    <div className="set"><span className="lbl">Sizes</span>
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg" iconRight={<Ic n="ArrowRight"/>}>Large</Button>
+      <Button disabled>Disabled</Button>
+    </div>
+    <div className="set dark"><span className="lbl" style={{color:'rgba(255,255,255,.5)'}}>On navy</span>
+      <Button variant="on-dark" iconLeft={<Ic n="CalendarCheck"/>}>Schedule online</Button>
+      <Button variant="accent">Emergency</Button>
+    </div>
+  </>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

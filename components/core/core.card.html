@@ -1,0 +1,34 @@
+<!-- @dsCard group="Components" viewport="700x240" name="Badges & Rating" subtitle="Trust pills + Google-style rating chip" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);padding:26px;font-family:var(--font-body)}
+.set{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint);width:100%;margin-bottom:2px}</style></head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Badge, RatingBadge } = window.ToiletPlusDesignSystem_5215f9;
+const Ic = ({n,s=13}) => { const r=React.useRef(); React.useEffect(()=>{const node=lucide.icons?.[n]||lucide[n];if(!node||!r.current)return;const svg=lucide.createElement(node);svg.setAttribute('width',s);svg.setAttribute('height',s);r.current.innerHTML='';r.current.appendChild(svg);},[]); return <span ref={r} style={{display:'flex'}}/>; };
+function Demo(){
+  return (<>
+    <div className="set"><span className="lbl">Badges</span>
+      <Badge tone="green" icon={<Ic n="BadgeCheck"/>}>Licensed &amp; Insured</Badge>
+      <Badge tone="accent" icon={<Ic n="Clock"/>}>24/7 Emergency</Badge>
+      <Badge tone="blue">Same-Day Service</Badge>
+      <Badge tone="navy">Upfront Pricing</Badge>
+      <Badge tone="amber">Avg. 1-hr arrival</Badge>
+      <Badge tone="gray" size="sm">Lic. #PL-48217</Badge>
+    </div>
+    <div className="set"><span className="lbl">Rating</span>
+      <RatingBadge value={4.9} count={2148} size="lg"/>
+      <RatingBadge value={4.7} count={860}/>
+    </div>
+  </>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

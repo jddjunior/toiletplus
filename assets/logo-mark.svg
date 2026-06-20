@@ -1,0 +1,14 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toilet Plus mark">
+  <defs>
+    <linearGradient id="tpMark" x1="8" y1="8" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1466CC"></stop>
+      <stop offset="1" stop-color="#0B3D7E"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="64" height="64" rx="16" fill="url(#tpMark)"></rect>
+  
+  <rect x="31" y="18" width="10" height="36" rx="5" fill="#FFFFFF"></rect>
+  <rect x="18" y="31" width="36" height="10" rx="5" fill="#FFFFFF"></rect>
+  
+  <path d="M53 14c0 4.4-3.1 7-6.5 7S40 18.4 40 14c0-3.3 4.2-7.8 5.9-9.5a.8.8 0 0 1 1.2 0C48.8 6.2 53 10.7 53 14Z" fill="#FF4D4D"></path>
+</svg>

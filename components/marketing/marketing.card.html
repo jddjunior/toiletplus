@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Service · Review · Guarantee" subtitle="Homepage marketing blocks" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-muted);padding:24px;font-family:var(--font-body)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:stretch}</style></head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { ServiceCard, ReviewCard, GuaranteeCard } = window.ToiletPlusDesignSystem_5215f9;
+const Ic = ({n,s=26}) => { const r=React.useRef(); React.useEffect(()=>{const node=lucide.icons?.[n]||lucide[n];if(!node||!r.current)return;const svg=lucide.createElement(node);svg.setAttribute('width',s);svg.setAttribute('height',s);r.current.innerHTML='';r.current.appendChild(svg);},[]); return <span ref={r} style={{display:'flex'}}/>; };
+function Demo(){
+  return (<div className="grid">
+    <ServiceCard icon={<Ic n="Droplets"/>} title="Drain Cleaning" href="#">
+      Slow sink or backed-up shower? We snake, jet, and camera the line so it actually stays clear.
+    </ServiceCard>
+    <ReviewCard rating={5} quote="Showed up within the hour and fixed the leak fast. Told me the price first." author="Marcus T." location="Northgate" source="Google"/>
+    <GuaranteeCard icon={<Ic n="BadgeCheck" s={24}/>} title="Upfront pricing">
+      You approve the price before we lift a wrench. No surprises on the invoice.
+    </GuaranteeCard>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>

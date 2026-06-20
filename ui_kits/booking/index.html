@@ -1,0 +1,34 @@
+<!-- @dsCard group="Booking" viewport="1280x820" name="Agentic Booking Funnel" subtitle="Conversational dispatcher — ZIP → triage → schedule → auto-quote → confirm" -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started — Toilet Plus</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style> body { margin: 0; } </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+
+  <script src="funnel-data.js"></script>
+  <script type="text/babel" src="../website/_kit.jsx"></script>
+  <script type="text/babel" src="Ticket.jsx"></script>
+  <script type="text/babel" src="BookingFunnel.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPBookingFunnel && window.TPTicket && window.TPKit && window.TPFunnelData && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(React.createElement(window.TPBookingFunnel));
+      } else { setTimeout(boot, 40); }
+    }
+    boot();
+  </script>
+</body>
+</html>

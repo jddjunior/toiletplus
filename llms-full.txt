@@ -1,0 +1,84 @@
+# Toilet Plus — full LLM reference
+
+All plumbing services, lots of plumber connections. Toilet Plus is an agentic, two-sided
+plumbing platform: homeowners book a licensed local plumber in minutes through "Plus" (an
+AI dispatcher), and plumbing businesses run their entire operation — leads, jobs,
+scheduling, flat-rate pricing, payments — on a multi-tenant SaaS with an embedded AI
+copilot and a job/lead marketplace for subcontracting.
+
+Brand voice: friend-speak (a straight-talking neighbor), never marketing-speak. Short
+sentences, contractions, honest reads. Upfront flat-rate pricing, 24/7, licensed/bonded/
+insured (Lic. #PL-48217). No hype, no emoji, no scare tactics. SEO/LSI plumbing terms used
+naturally: drain cleaning, hydro-jetting, clogged/slow drain, snake the line, sewer
+lateral, main line backup, water heater repair, tankless, leak detection, slab leak,
+pinhole leak, burst pipe, repipe, galvanized pipe, water pressure, sump pump, garbage
+disposal, P-trap, flange, fixture, emergency plumber, same-day.
+
+================================================================================
+HOMEOWNER FUNNEL  (/get-started)
+================================================================================
+A structured conversation run by the AI dispatcher "Plus". Five steps:
+
+1. COVERAGE — homeowner enters ZIP. System confirms service area and routes the nearest
+   licensed crew (e.g. 98107 → Ballard → Sam R.'s crew, truck TP-07, ★4.9).
+2. INTAKE — "What's going on?" Options: clogged/slow drain · no hot water · leak/burst
+   pipe · sewer/main backup · toilet/faucet/fixture · something else (free text).
+3. DIAGNOSTIC + TRIAGE — one smart follow-up per problem; result sets urgency:
+   emergency | urgent | today | soon. Examples:
+     - Leak "actively running, can't stop" → emergency (priority dispatch).
+     - Water heater "pooling at base" → urgent.
+     - One sink clog → soon.
+4. QUOTE + SCHEDULE — a flat-rate estimate range is shown (from the pricebook, below),
+   then real windows with the assigned plumber and ETA. Soonest window is highlighted.
+5. CONFIRM — name + mobile. System books the job, sends a confirmation text, schedules an
+   ETA text at roll-out, and a follow-up/review request after. A live "Job Ticket"
+   (#TP-####) summarizes location, service, details, plumber, window, estimate, contact.
+
+FLAT-RATE PRICEBOOK (estimate ranges; final set on site, approved before work):
+  - Drain cleaning ............ $149–$325  (free camera look; hydro-jetting quoted on site)
+  - Water heater repair ....... $185–$480  (replacement quoted on site, sized right)
+  - Leak detection & repair ... $165–$390  (slab/behind-wall quoted after locate)
+  - Sewer / main line clear ... $199–$450  (+ camera inspection; root/repair quoted)
+  - Fixtures & toilets ........ $129–$280  (per fixture; parts shown before install)
+  - Other ..................... quoted on site, always before any work
+
+================================================================================
+OPERATOR PLATFORM  (Toilet Plus Pro, /pro)
+================================================================================
+Multi-tenant SaaS for plumbing businesses. Each tenant (a plumbing company) gets:
+  - JOBS PIPELINE — board: new → scheduled → in_progress → invoiced → paid.
+  - DISPATCH BOARD — plumbers × time; drag-assign, route by proximity.
+  - JOB DETAIL — timeline, photos, quote, invoice, AI notes.
+  - CUSTOMER RECORDS — history, equipment, prior visits.
+  - PRICEBOOK — flat-rate service catalog (drives both quotes and homeowner estimates).
+  - PAYMENTS & INVOICES — draft/send invoices, take card/ACH, chase unpaid balances.
+  - REPORTS — revenue, close rate, avg ticket, first-time-fix, review score.
+  - AI COPILOT — chat + suggested actions: daily briefing, dispatch suggestions, auto-quote
+    drafts, comms drafts, "who should take this lead" recommendations.
+
+MARKETPLACE / SUBCONTRACTING (/pro/marketplace):
+  - Leads and overflow jobs can be posted to, or claimed from, the marketplace.
+  - Billing models: pay-per-lead and pay-per-job. Agency-style oversight lets a parent
+    org organize sub-contractors, set rules, and audit fulfillment for both the homeowner
+    and the plumber side.
+
+FIELD APP (/pro/app): today's route, on-site flat-rate quote builder, photos, collect
+payment, mark complete — optimized for one-handed use in the field.
+
+================================================================================
+AGENT GUARDRAILS (summary — full text in agentic.md)
+================================================================================
+  - Confirm before committing: booking, invoicing, charging, or claiming a paid lead needs
+    an explicit human "yes" in-session.
+  - Never quote outside the pricebook; estimates are ranges; final shown before work.
+  - Emergencies escalate immediately to (555) 240-7867 — don't bury behind a form.
+  - Only assign licensed/insured/background-checked plumbers; surface Lic. #PL-48217.
+  - Collect only ZIP, problem, name, mobile to book. No spam, no PII sale.
+
+TOOLS (machine-readable: agentic/tools.mcp.json, .well-known/ai-plugin.json):
+  lookup_coverage(zip) · run_intake(problem) · triage_urgency(intake) ·
+  get_quote(service, details) · get_slots(zip, urgency) · create_booking(...) ·
+  send_message(channel, to, template) · list_jobs(tenant, filter) · claim_lead(lead_id) ·
+  create_invoice(job_id, lines) · take_payment(invoice_id, method)
+
+CONTACT: (555) 240-7867 · 24/7 · metro + ~30 mi.

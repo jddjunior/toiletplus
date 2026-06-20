@@ -1,0 +1,27 @@
+# Toilet Plus
+
+> All plumbing services, lots of plumber connections. Toilet Plus books licensed local
+> plumbers for homeowners in minutes, and runs the back office (jobs, scheduling, flat-rate
+> pricing, payments) for plumbing businesses — an agentic, two-sided plumbing platform.
+
+Voice: friend-speak, not marketing-speak. Honest, upfront pricing, 24/7. Licensed #PL-48217.
+
+## Homeowner
+- [Get started (agentic booking)](/get-started): chat with "Plus", our AI dispatcher — ZIP → smart intake & urgency triage → nearest plumber + soonest window → flat-rate estimate → confirm.
+- [Services](/services): drain cleaning, water heaters (tank & tankless), leak detection, sewer & main line, fixtures & toilets, repiping & water quality.
+- [Pricing](/pricing): flat-rate pricebook. Estimate shown before any work; final price set on site, approved first.
+- [Service area](/service-area): metro + ~30 miles. Coverage by ZIP.
+- [Reviews](/reviews): 4.9★ across 2,148 Google reviews.
+
+## Plumbers / operators
+- [Toilet Plus Pro](/pro): multi-tenant CRM — jobs pipeline, dispatch board, pricebook, invoices & payments, AI copilot.
+- [Lead & job marketplace](/pro/marketplace): receive, claim, or subcontract jobs. Pay per lead / per job.
+- [Field app](/pro/app): today's jobs, on-site quote, collect payment.
+
+## For AI agents
+- [agentic.md](/agentic.md): how an agent operates Toilet Plus + guardrails.
+- [Plugin manifest](/.well-known/ai-plugin.json)
+- [MCP tools](/agentic/tools.mcp.json): lookup_coverage, run_intake, get_quote, get_slots, create_booking, send_message, list_jobs, claim_lead, create_invoice, take_payment.
+
+## Optional
+- [Financing](/financing) · [Careers](/careers) · [Contact](/contact) · [llms-full.txt](/llms-full.txt)

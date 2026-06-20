@@ -1,0 +1,63 @@
+<!-- @dsCard group="Website" viewport="1280x760" name="Homepage" subtitle="Toilet Plus marketing site — hero, services, reviews, booking flow" -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toilet Plus — Local Plumbers, Done Right</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+
+  <script type="text/babel" src="_kit.jsx"></script>
+  <script type="text/babel" src="Header.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="SpecStrip.jsx"></script>
+  <script type="text/babel" src="Services.jsx"></script>
+  <script type="text/babel" src="Guarantees.jsx"></script>
+  <script type="text/babel" src="Reviews.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+  <script type="text/babel" src="BookingModal.jsx"></script>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState } = React;
+    function App() {
+      const [booking, setBooking] = useState(false);
+      const open = () => setBooking(true);
+      return (
+        <React.Fragment>
+          <window.TPHeader onBook={open} />
+          <main>
+            <window.TPHero onBook={open} />
+            <window.TPSpecStrip />
+            <window.TPServices />
+            <window.TPGuarantees />
+            <window.TPReviews />
+          </main>
+          <window.TPFooter />
+          {booking && <window.TPBooking onClose={() => setBooking(false)} />}
+        </React.Fragment>
+      );
+    }
+    // wait for babel-loaded screen scripts to register on window
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPHero && window.TPBooking && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

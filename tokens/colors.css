@@ -1,0 +1,83 @@
+/* Toilet Plus — Color tokens
+   Brand: confident plumber blue, deep navy, white/black, gray scale,
+   with a light-red highlight reserved for urgency (24/7, emergency, alerts). */
+
+:root {
+  /* ---- Brand blue scale ---- */
+  --blue-50:  #EAF3FF;
+  --blue-100: #D2E5FF;
+  --blue-200: #A6CBFF;
+  --blue-300: #6FA8F5;
+  --blue-400: #3B85EA;
+  --blue-500: #1466CC; /* primary */
+  --blue-600: #0F52A8;
+  --blue-700: #0B3D7E; /* dark blue */
+  --blue-800: #0A2C5A;
+  --blue-900: #071E3D; /* navy — footer, hero overlays */
+
+  /* ---- Accent: light red (urgency only) ---- */
+  --red-50:  #FFF0F0;
+  --red-100: #FFE2E2;
+  --red-300: #FF9A9A;
+  --red-500: #FF4D4D; /* accent */
+  --red-600: #E63333;
+  --red-700: #C32424;
+
+  /* ---- Neutral / gray ---- */
+  --gray-0:   #FFFFFF;
+  --gray-50:  #F5F8FC;
+  --gray-100: #EDF1F7;
+  --gray-200: #E0E6F0;
+  --gray-300: #C9D2E0;
+  --gray-400: #98A4B8;
+  --gray-500: #6A7689;
+  --gray-600: #4A5566;
+  --gray-700: #333C49;
+  --gray-800: #1E2630;
+  --gray-900: #0D1217;
+  --black:    #07090C;
+
+  /* ---- Functional ---- */
+  --green-500: #1FA463; /* success / licensed-bonded checks */
+  --green-50:  #E6F6EE;
+  --amber-500: #E8920A; /* warning */
+  --amber-50:  #FCF1DD;
+
+  /* ============ Semantic aliases ============ */
+  --color-primary:        var(--blue-500);
+  --color-primary-hover:  var(--blue-600);
+  --color-primary-press:  var(--blue-700);
+  --color-primary-soft:   var(--blue-50);
+
+  --color-accent:         var(--red-500);
+  --color-accent-hover:   var(--red-600);
+  --color-accent-press:   var(--red-700);
+  --color-accent-soft:    var(--red-50);
+
+  --color-navy:           var(--blue-900);
+
+  /* Surfaces */
+  --surface-page:    var(--gray-0);
+  --surface-muted:   var(--gray-50);
+  --surface-card:    var(--gray-0);
+  --surface-sunken:  var(--gray-100);
+  --surface-navy:    var(--blue-900);
+  --surface-brand:   var(--blue-500);
+
+  /* Text */
+  --text-strong:   var(--blue-900);
+  --text-body:     var(--gray-700);
+  --text-muted:    var(--gray-500);
+  --text-faint:    var(--gray-400);
+  --text-on-dark:  var(--gray-0);
+  --text-on-dark-muted: #AFC2DC;
+  --text-link:     var(--blue-500);
+
+  /* Borders */
+  --border-soft:   var(--gray-200);
+  --border-strong: var(--gray-300);
+  --border-on-dark: rgba(255,255,255,0.14);
+
+  /* Focus ring */
+  --ring: color-mix(in srgb, var(--blue-500) 45%, transparent);
+}

@@ -1,0 +1,61 @@
+/* Toilet Plus — base element styling & helper classes.
+   Lightweight reset + brand typography defaults so consumers inherit the right
+   look from plain HTML. Helpers (.tp-container, .tp-eyebrow, .tp-btn) are optional
+   conveniences; React components carry their own inline-token styling. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-normal);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+  margin: 0 0 0.4em;
+  font-weight: var(--fw-extrabold);
+}
+h1 { font-size: var(--fs-display-xl); }
+h2 { font-size: var(--fs-display-lg); }
+h3 { font-size: var(--fs-title-lg); line-height: var(--lh-snug); }
+h4 { font-size: var(--fs-title-md); line-height: var(--lh-snug); font-weight: var(--fw-bold); }
+
+p { margin: 0 0 1em; text-wrap: pretty; }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong { font-weight: var(--fw-bold); color: var(--text-strong); }
+
+/* ---- Helpers ---- */
+.tp-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-pad);
+}
+
+.tp-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-overline);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tp-eyebrow--accent { color: var(--color-accent); }
+
+/* Phone numbers / data */
+.tp-mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }

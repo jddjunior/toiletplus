@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" viewport="700x230" name="Form Fields" subtitle="Input & Select — label, icon, error" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;background:var(--surface-page);padding:26px;font-family:var(--font-body)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}</style></head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Input, Select } = window.ToiletPlusDesignSystem_5215f9;
+const Ic = ({n,s=18}) => { const r=React.useRef(); React.useEffect(()=>{const node=lucide.icons?.[n]||lucide[n];if(!node||!r.current)return;const svg=lucide.createElement(node);svg.setAttribute('width',s);svg.setAttribute('height',s);r.current.innerHTML='';r.current.appendChild(svg);},[]); return <span ref={r} style={{display:'flex'}}/>; };
+function Demo(){
+  return (<div className="grid">
+    <Input label="Your name" placeholder="Jane from Maple St." required/>
+    <Input label="ZIP code" icon={<Ic n="MapPin"/>} placeholder="98103" hint="We serve the metro + 30 mi."/>
+    <Select label="What's going on?" required><option>Clogged drain</option><option>Water heater</option><option>Leak / burst pipe</option></Select>
+    <Input label="Email" defaultValue="jane@@" error="That doesn't look like an email."/>
+    <Input label="Phone" icon={<Ic n="Phone"/>} placeholder="(555) 240-7867"/>
+    <Select label="Best time"><option>Morning</option><option>Afternoon</option><option>Evening</option></Select>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body></html>
