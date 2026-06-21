@@ -2,7 +2,8 @@
 (function () {
   function Hero({ onBook }) {
     const { Button, Input } = window.ToiletPlusDesignSystem_5215f9;
-    const { Icon, Stamp, blueprint } = window.TPKit;
+    const { Icon, Stamp, blueprint, useViewport } = window.TPKit;
+    const { isMobile } = useViewport();
 
     return React.createElement('section', {
       style: { position: 'relative', background: 'linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%)', color: '#fff', overflow: 'hidden' },
@@ -10,22 +11,22 @@
       // blueprint grid
       React.createElement('div', { style: { position: 'absolute', inset: 0, ...blueprint('rgba(255,255,255,0.05)', 32), pointerEvents: 'none' } }),
       // big ghost wordmark watermark
-      React.createElement('div', { style: { position: 'absolute', right: -40, bottom: -70, fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 320, lineHeight: 1, color: 'rgba(255,255,255,0.03)', pointerEvents: 'none', letterSpacing: '-0.04em' } }, '+'),
+      React.createElement('div', { style: { position: 'absolute', right: -40, bottom: -70, fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: isMobile ? 180 : 320, lineHeight: 1, color: 'rgba(255,255,255,0.03)', pointerEvents: 'none', letterSpacing: '-0.04em' } }, '+'),
 
-      React.createElement('div', { style: { position: 'relative', maxWidth: 'var(--container-max)', margin: '0 auto', padding: '76px 24px 88px', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center' } },
+      React.createElement('div', { style: { position: 'relative', maxWidth: 'var(--container-max)', margin: '0 auto', padding: isMobile ? '40px 18px 48px' : '76px 24px 88px', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1.1fr 0.9fr', gap: isMobile ? 32 : 64, alignItems: 'center' } },
         // left
         React.createElement('div', null,
-          React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 26, paddingBottom: 18, borderBottom: '1px solid var(--border-on-dark)' } },
+          React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: isMobile ? 10 : 16, flexWrap: 'wrap', marginBottom: isMobile ? 20 : 26, paddingBottom: 18, borderBottom: '1px solid var(--border-on-dark)' } },
             React.createElement(Stamp, { tone: 'accent' }, '24/7 Emergency'),
-            React.createElement('span', { style: { width: 1, height: 14, background: 'var(--border-on-dark)' } }),
+            !isMobile && React.createElement('span', { style: { width: 1, height: 14, background: 'var(--border-on-dark)' } }),
             React.createElement(Stamp, { tone: 'onDark', tick: false }, 'Licensed #PL-48217'),
-            React.createElement('span', { style: { width: 1, height: 14, background: 'var(--border-on-dark)' } }),
+            !isMobile && React.createElement('span', { style: { width: 1, height: 14, background: 'var(--border-on-dark)' } }),
             React.createElement(Stamp, { tone: 'onDark', tick: false }, 'Same-Day')),
-          React.createElement('h1', { style: { fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 68, lineHeight: 0.98, letterSpacing: '-0.03em', margin: '0 0 22px', color: '#fff' } },
+          React.createElement('h1', { style: { fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: isMobile ? 40 : 68, lineHeight: 0.98, letterSpacing: '-0.03em', margin: '0 0 22px', color: '#fff' } },
             'Burst pipe.', React.createElement('br'),
             'Slow drain.', React.createElement('br'),
             React.createElement('span', { style: { color: 'var(--blue-300)' } }, 'We show up fast.')),
-          React.createElement('p', { style: { fontSize: 18, lineHeight: 1.55, color: 'var(--text-on-dark-muted)', maxWidth: 500, margin: '0 0 30px' } },
+          React.createElement('p', { style: { fontSize: isMobile ? 16 : 18, lineHeight: 1.55, color: 'var(--text-on-dark-muted)', maxWidth: 500, margin: '0 0 30px' } },
             'Local, licensed plumbers for drain cleaning, water heaters, leak detection, and sewer lines \u2014 with upfront, flat-rate pricing. Real people, honest answers, no surprise fees.'),
           React.createElement('div', { style: { display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 28 } },
             React.createElement(Button, { variant: 'accent', size: 'lg', iconLeft: React.createElement(Icon, { name: 'Phone', size: 18 }), href: 'tel:5552407867' }, 'Call (555) 240-7867'),

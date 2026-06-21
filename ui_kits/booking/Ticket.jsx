@@ -9,12 +9,12 @@
         React.createElement('div', { style: { fontSize: 14, fontWeight: filled ? 600 : 400, color: filled ? 'var(--text-strong)' : 'var(--text-faint)', lineHeight: 1.35 } }, filled ? children : 'Pending\u2026')));
   }
 
-  function Ticket({ data, status, ticketNo }) {
+  function Ticket({ data, status, ticketNo, isMobile }) {
     const { Icon, Badge } = { Icon: window.TPKit.Icon, Badge: window.ToiletPlusDesignSystem_5215f9.Badge };
     const confirmed = status === 'confirmed';
     const u = data.urgency && window.TPFunnelData.URGENCY[data.urgency];
 
-    return React.createElement('aside', { style: { position: 'sticky', top: 24, alignSelf: 'start' } },
+    return React.createElement('aside', { style: isMobile ? { order: 2 } : { position: 'sticky', top: 24, alignSelf: 'start' } },
       React.createElement('div', { style: { background: '#fff', border: '1px solid var(--border-strong)', borderRadius: 'var(--radius-md)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' } },
         // header bar
         React.createElement('div', { style: { background: confirmed ? 'var(--green-500)' : 'var(--blue-900)', color: '#fff', padding: '13px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' } },

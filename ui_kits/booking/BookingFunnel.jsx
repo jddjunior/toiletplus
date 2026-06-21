@@ -27,7 +27,8 @@
 
   function BookingFunnel() {
     const { Button, Input } = window.ToiletPlusDesignSystem_5215f9;
-    const { Icon } = window.TPKit;
+    const { Icon, useViewport } = window.TPKit;
+    const { isMobile } = useViewport();
     const D = window.TPFunnelData;
 
     const [messages, setMessages] = useState([
@@ -164,7 +165,7 @@
       }
       if (phase === 'contact') {
         return React.createElement('div', { style: { display: 'flex', flexDirection: 'column', gap: 12 } },
-          React.createElement('div', { style: { display: 'flex', gap: 12 } },
+          React.createElement('div', { style: { display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: 12 } },
             React.createElement(Input, { label: 'Your name', placeholder: 'Jane from Maple St.', value: name, onChange: (e) => setName(e.target.value), style: { flex: 1 } }),
             React.createElement(Input, { label: 'Mobile', icon: React.createElement(Icon, { name: 'Phone', size: 18 }), placeholder: '(555) 240-7867', value: phone, onChange: (e) => setPhone(e.target.value), style: { flex: 1 } })),
           React.createElement(Button, { variant: 'primary', size: 'lg', block: true, onClick: submitContact, iconRight: React.createElement(Icon, { name: 'Check', size: 18 }) }, 'Confirm booking'),
@@ -218,19 +219,19 @@
     return React.createElement('div', { style: { minHeight: '100vh', background: 'var(--surface-muted)', display: 'flex', flexDirection: 'column' } },
       // top bar
       React.createElement('header', { style: { background: '#fff', borderBottom: '1px solid var(--border-soft)', position: 'sticky', top: 0, zIndex: 10 } },
-        React.createElement('div', { style: { maxWidth: 1160, margin: '0 auto', padding: '0 24px', height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between' } },
-          React.createElement(window.ToiletPlusDesignSystem_5215f9.Logo, { size: 30, href: '../website/index.html' }),
-          React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: 14 } },
-            React.createElement('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11.5, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-muted)' } }, `Step ${Math.min(curStep, 5)} / 5`),
-            React.createElement('span', { style: { width: 120, height: 5, background: 'var(--gray-200)', borderRadius: 3, overflow: 'hidden' } },
+        React.createElement('div', { style: { maxWidth: 1160, margin: '0 auto', padding: isMobile ? '0 16px' : '0 24px', height: isMobile ? 56 : 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 } },
+          React.createElement(window.ToiletPlusDesignSystem_5215f9.Logo, { size: isMobile ? 26 : 30, href: '../website/index.html' }),
+          React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 14, flex: isMobile ? 1 : 'none', justifyContent: isMobile ? 'flex-end' : 'flex-start' } },
+            React.createElement('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11.5, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text-muted)', whiteSpace: 'nowrap' } }, `Step ${Math.min(curStep, 5)} / 5`),
+            React.createElement('span', { style: { width: isMobile ? 72 : 120, height: 5, background: 'var(--gray-200)', borderRadius: 3, overflow: 'hidden' } },
               React.createElement('span', { style: { display: 'block', height: '100%', width: `${(Math.min(curStep, 5) / 5) * 100}%`, background: 'var(--color-primary)', transition: 'width var(--dur-slow) var(--ease-out)' } }))),
-          React.createElement('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11.5, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 7 } },
+          !isMobile && React.createElement('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11.5, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: 7 } },
             React.createElement(Icon, { name: 'Phone', size: 14, color: 'var(--color-accent)' }), '(555) 240-7867'))),
       // body
-      React.createElement('div', { style: { flex: 1, maxWidth: 1160, width: '100%', margin: '0 auto', padding: '28px 24px 40px', display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 360px', gap: 28, alignItems: 'start' } },
+      React.createElement('div', { style: { flex: 1, maxWidth: 1160, width: '100%', margin: '0 auto', padding: isMobile ? '20px 16px 32px' : '28px 24px 40px', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'minmax(0,1fr) 360px', gap: isMobile ? 20 : 28, alignItems: 'start' } },
         // conversation column
-        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', minHeight: 'calc(100vh - 160px)' } },
-          React.createElement('div', { ref: scroller, style: { flex: 1, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4, maxHeight: 'calc(100vh - 230px)' } },
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', minHeight: isMobile ? 'auto' : 'calc(100vh - 160px)', order: 1 } },
+          React.createElement('div', { ref: scroller, style: { flex: 1, overflowY: 'auto', overflowX: 'hidden', paddingRight: 4, maxHeight: isMobile ? 'none' : 'calc(100vh - 230px)' } },
             messages.map(renderMsg),
             typing && React.createElement('div', { style: { display: 'flex', gap: 10, marginBottom: 12 } },
               React.createElement(AgentAvatar, null),
@@ -239,7 +240,7 @@
           // control dock
           React.createElement('div', { style: { marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--border-soft)' } }, React.createElement(Control, null))),
         // ticket
-        React.createElement(window.TPTicket, { data, status: phase === 'done' ? 'confirmed' : 'draft', ticketNo: 'TP-2049' })));
+        React.createElement(window.TPTicket, { data, status: phase === 'done' ? 'confirmed' : 'draft', ticketNo: 'TP-2049', isMobile })));
   }
 
   // inject styles once

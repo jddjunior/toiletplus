@@ -13,13 +13,15 @@
 
   function Services() {
     const { ServiceCard } = window.ToiletPlusDesignSystem_5215f9;
+    const { isMobile, isTablet } = window.TPKit.useViewport();
+    const cols = isMobile ? '1fr' : isTablet ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)';
     return React.createElement(Section, { id: 'services', tone: 'muted' },
       React.createElement(SectionHead, {
         index: '01', kicker: 'What we fix',
         title: 'Plumbing services, done right ', accentTitle: 'the first time.',
         intro: 'From a dripping faucet to a full repipe \u2014 residential and light commercial. If it carries water, we work on it.',
       }),
-      React.createElement('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 } },
+      React.createElement('div', { style: { display: 'grid', gridTemplateColumns: cols, gap: 18 } },
         SERVICES.map(([idx, ic, title, body]) =>
           React.createElement(ServiceCard, { key: title, index: idx, icon: React.createElement(Icon, { name: ic, size: 30, stroke: 1.75 }), title, href: '#' }, body)))
     );
