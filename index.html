@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Toilet Plus — Kits</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .wrap { width: 100%; max-width: 720px; }
+    .brand {
+      font-weight: 900;
+      font-size: clamp(34px, 7vw, 52px);
+      letter-spacing: -0.03em;
+      margin: 0 0 8px;
+    }
+    .brand span { color: #FF7A2F; }
+    .sub {
+      margin: 0 0 32px;
+      font-size: clamp(15px, 3.5vw, 18px);
+      line-height: 1.55;
+      color: rgba(255,255,255,0.75);
+    }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 560px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 16px;
+      padding: 22px;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .card:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
+    .card h2 { margin: 0 0 6px; font-size: 19px; font-weight: 800; }
+    .card p { margin: 0; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.7); }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7FB6FF;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="tag">Toilet Plus · UI Kits</p>
+    <h1 class="brand">Toilet Plus<span>+</span></h1>
+    <p class="sub">Mobile-friendly demo kits. Pick one to preview.</p>
+    <div class="grid">
+      <a class="card" href="./ui_kits/website/index.html">
+        <h2>Marketing Website</h2>
+        <p>Hero, services, guarantees, reviews, footer, and the booking modal.</p>
+      </a>
+      <a class="card" href="./ui_kits/booking/index.html">
+        <h2>Booking Funnel</h2>
+        <p>Guided conversational booking flow with a live job ticket.</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
