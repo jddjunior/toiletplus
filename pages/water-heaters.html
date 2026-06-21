@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Heater Repair & Replacement in Tampa, FL | Toilet Plus</title>
+  <meta name="description" content="Water heater repair and replacement in Tampa. Tank and tankless units. Same-day service, flat-rate pricing. Emergency repairs available 24/7. Call (555) 240-7867.">
+  <meta property="og:title" content="Water Heater Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Professional water heater repair and replacement. Tank and tankless options. Same-day service.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+    .comparison-card { padding: 32px 24px; background: var(--surface-muted); border-radius: var(--radius-md); border-left: 4px solid var(--color-primary); }
+    .comparison-card h4 { margin: 0 0 16px; font-size: 20px; font-weight: 700; }
+    .comparison-card ul { margin: 0; padding-left: 24px; }
+    .comparison-card li { font-size: 14px; color: var(--text-body); line-height: 1.8; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState } = React;
+    
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Water Heater Repair & Replacement</h1>
+                <p>No hot water this morning? We repair, replace, and maintain both tank and tankless water heaters. Same-day service, flat-rate pricing.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Water Heater Services</h2>
+                <p>Whether your water heater has stopped working completely or is running inefficiently, our licensed plumbers can diagnose and fix the problem quickly.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Tank vs. Tankless Water Heaters</h3>
+                <div className="comparison-grid">
+                  <div className="comparison-card">
+                    <h4>Traditional Tank Water Heaters</h4>
+                    <ul>
+                      <li>Stores 40-60 gallons of hot water</li>
+                      <li>Lower upfront cost</li>
+                      <li>Typical lifespan: 8-12 years</li>
+                      <li>Takes 1-2 hours to heat water</li>
+                      <li>Good for large families</li>
+                    </ul>
+                  </div>
+                  <div className="comparison-card">
+                    <h4>Tankless Water Heaters</h4>
+                    <ul>
+                      <li>Heats water on-demand</li>
+                      <li>Saves 15-20% on energy bills</li>
+                      <li>Typical lifespan: 15-20 years</li>
+                      <li>Instant hot water at any tap</li>
+                      <li>Compact, wall-mounted design</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Signs Your Water Heater Needs Service</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>No hot water or insufficient hot water supply</li>
+                  <li>Water is too hot or temperature fluctuates</li>
+                  <li>Strange noises (rumbling, popping) from tank</li>
+                  <li>Leaking water around the base</li>
+                  <li>Rusty or discolored water</li>
+                  <li>Water heater is over 10 years old</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Reliable Water Heater Service</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>Don't shower in cold water. We repair and replace water heaters same-day. Available 24/7.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

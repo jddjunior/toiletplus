@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ | Toilet Plus Emergency Plumbing Tampa</title>
+  <meta name="description" content="Frequently asked questions about Toilet Plus emergency plumbing services in Tampa. Learn about our services, pricing, and response times.">
+  <meta property="og:title" content="FAQ | Toilet Plus">
+  <meta property="og:description" content="Answers to common questions about our plumbing services.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .header-section { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .header-section h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .content-section { padding: 80px 0; }
+    .faq-item { margin-bottom: 24px; padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); }
+    .faq-item h3 { margin: 0 0 12px; font-size: 18px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item h3:hover { color: var(--color-primary); }
+    .faq-item p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--text-body); }
+    .faq-toggle { font-size: 20px; }
+    .faq-category { margin-bottom: 40px; }
+    .faq-category h2 { font-family: var(--font-display); font-size: 28px; font-weight: 800; margin: 0 0 24px; }
+    @media (max-width: 768px) {
+      .header-section h1 { font-size: 36px; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState } = React;
+    
+    function FAQItem({ question, answer }) {
+      const [open, setOpen] = useState(false);
+      return (
+        <div className="faq-item">
+          <h3 onClick={() => setOpen(!open)}>
+            {question}
+            <span className="faq-toggle">{open ? '−' : '+'}</span>
+          </h3>
+          {open && <p>{answer}</p>}
+        </div>
+      );
+    }
+    
+    function App() {
+      const faqs = {
+        'Service & Response': [
+          {
+            q: 'What areas do you service?',
+            a: 'We serve Tampa, FL and surrounding areas. Call us to confirm your location.'
+          },
+          {
+            q: 'How fast can you respond?',
+            a: 'For emergencies, we typically respond within 15-30 minutes. You can book online or call (555) 240-7867 for immediate availability.'
+          },
+          {
+            q: 'Are you available 24/7?',
+            a: 'Yes! We offer 24/7 emergency plumbing service, including nights, weekends, and holidays.'
+          },
+          {
+            q: 'Do you offer same-day service?',
+            a: 'Absolutely. In most cases, we can complete repairs the same day you call.'
+          }
+        ],
+        'Pricing & Payment': [
+          {
+            q: 'Do you charge by the hour?',
+            a: 'No. We provide flat-rate pricing so you know the cost upfront. No surprise fees.'
+          },
+          {
+            q: 'Is there an emergency service charge?',
+            a: 'We charge flat rates regardless of when you need service. Evening and emergency calls cost the same as daytime calls.'
+          },
+          {
+            q: 'What payment methods do you accept?',
+            a: 'We accept cash, credit cards, debit cards, and digital payment methods.'
+          },
+          {
+            q: 'Do you offer financing?',
+            a: 'Yes, financing options are available for larger jobs. Ask our dispatcher when you call.'
+          }
+        ],
+        'Services': [
+          {
+            q: 'What types of plumbing issues do you fix?',
+            a: 'We handle drain cleaning, water heaters, leak detection, sewer & main line, fixtures & toilets, repiping, and water quality. If it carries water, we work on it.'
+          },
+          {
+            q: 'Do you do emergency repairs?',
+            a: 'Yes! We specialize in emergency plumbing. Burst pipes, backed-up drains, no hot water — call us anytime.'
+          },
+          {
+            q: 'Do you offer preventive maintenance?',
+            a: 'Yes. We can recommend maintenance schedules to prevent future issues and save you money.'
+          },
+          {
+            q: 'Do you work on both residential and commercial properties?',
+            a: 'We primarily serve residential customers, but we do handle light commercial plumbing. Call to discuss your needs.'
+          }
+        ],
+        'Licensing & Trust': [
+          {
+            q: 'Are you licensed?',
+            a: 'Yes. We are a fully licensed plumbing company in Florida with license #PL-48217. We are also insured.'
+          },
+          {
+            q: 'Can I see your license before service?',
+            a: 'Of course! Our plumbers carry their licenses and are happy to show them upon request.'
+          },
+          {
+            q: 'Are you insured?',
+            a: 'Yes. We carry full liability insurance and workers compensation coverage for your protection.'
+          },
+          {
+            q: 'What if something goes wrong?',
+            a: 'We stand behind our work with a satisfaction guarantee. If you\'re not satisfied, we\'ll make it right.'
+          }
+        ]
+      };
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="header-section">
+              <div className="container">
+                <h1>Frequently Asked Questions</h1>
+                <p style={{fontSize: '18px', lineHeight: '1.6', maxWidth: '600px', color: 'var(--text-on-dark-muted)', margin: 0}}>Have a question? We've got answers. Click any question to expand.</p>
+              </div>
+            </section>
+
+            <section className="content-section">
+              <div className="container">
+                {Object.entries(faqs).map(([category, items]) => (
+                  <div key={category} className="faq-category">
+                    <h2>{category}</h2>
+                    {items.map((item, i) => (
+                      <FAQItem key={i} question={item.q} answer={item.a} />
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

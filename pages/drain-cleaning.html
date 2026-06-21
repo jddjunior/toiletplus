@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professional Drain Cleaning in Tampa, FL | 24/7 Service | Toilet Plus</title>
+  <meta name="description" content="Professional drain cleaning services in Tampa. We clear clogs with snaking, hydro-jetting, and camera inspection. Same-day service available. Call (555) 240-7867.">
+  <meta property="og:title" content="Drain Cleaning Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Fast, professional drain cleaning with snaking and hydro-jetting. Same-day service in Tampa.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 40px 0; }
+    .process-step { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); }
+    .process-step-num { font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--color-primary); margin-bottom: 12px; }
+    .process-step h4 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .process-step p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState } = React;
+    
+    function App() {
+      const { Section, Icon } = window.TPKit;
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Professional Drain Cleaning</h1>
+                <p>Slow sink? Backed-up shower? Clogged main line? We snake, hydro-jet, and camera inspect to clear the clog for good — not just push it down.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Why Choose Professional Drain Cleaning?</h2>
+                <p>DIY drain cleaners and store-bought chemicals might temporarily clear the clog, but they often leave buildup and damage your pipes. Our licensed plumbers use professional-grade equipment to thoroughly clear your drains and identify the root cause.</p>
+                <p>We use three proven methods depending on your situation:</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Our Drain Cleaning Methods</h3>
+                <div className="process-grid">
+                  <div className="process-step">
+                    <div className="process-step-num">METHOD 01</div>
+                    <h4>Drain Snaking</h4>
+                    <p>Mechanical removal of hair, grease, soap buildup, and minor obstructions in pipes.</p>
+                  </div>
+                  <div className="process-step">
+                    <div className="process-step-num">METHOD 02</div>
+                    <h4>Hydro-Jetting</h4>
+                    <p>High-pressure water jets blast through stubborn clogs and clean pipe walls completely.</p>
+                  </div>
+                  <div className="process-step">
+                    <div className="process-step-num">METHOD 03</div>
+                    <h4>Camera Inspection</h4>
+                    <p>Identify pipe damage, roots, and blockages with our video inspection system.</p>
+                  </div>
+                  <div className="process-step">
+                    <div className="process-step-num">METHOD 04</div>
+                    <h4>Prevention Plan</h4>
+                    <p>We recommend maintenance schedules to prevent future clogs and damage.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Signs You Need Drain Cleaning</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>Slow draining sink or shower</li>
+                  <li>Multiple drains backing up in your home</li>
+                  <li>Gurgling sounds from drains</li>
+                  <li>Bad odors coming from drains</li>
+                  <li>Recent flooding or water damage</li>
+                  <li>Age of plumbing system (if over 20 years old)</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Don't Let a Clogged Drain Ruin Your Day</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>We're available 24/7 for emergency drain cleaning. Call us now or book your appointment online.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>
