@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Area | Toilet Plus Emergency Plumbing in Tampa, FL</title>
+  <meta name="description" content="Toilet Plus serves Tampa, FL and surrounding areas. Quick response times for all emergencies. Same-day plumbing service available.">
+  <meta property="og:title" content="Service Area | Toilet Plus">
+  <meta property="og:description" content="Emergency plumbing service area. We serve Tampa and surrounding communities.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .header-section { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .header-section h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .content-section { padding: 80px 0; }
+    .content-section h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .content-section p { font-size: 16px; line-height: 1.8; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+    .area-card { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); border-left: 4px solid var(--color-primary); }
+    .area-card h3 { margin: 0 0 8px; font-size: 16px; font-weight: 700; }
+    .area-card p { margin: 0; font-size: 14px; color: var(--text-muted); }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .header-section h1 { font-size: 36px; }
+      .area-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="header-section">
+              <div className="container">
+                <h1>Service Area</h1>
+                <p style={{fontSize: '18px', lineHeight: '1.6', maxWidth: '600px', color: 'var(--text-on-dark-muted)', margin: 0}}>We serve Tampa, FL and surrounding communities. Fast response times, same-day service.</p>
+              </div>
+            </section>
+
+            <section className="content-section">
+              <div className="container">
+                <h2>Where We Service</h2>
+                <p>Toilet Plus proudly serves the Tampa metropolitan area and 30+ miles surrounding. Whether you're in downtown Tampa or in the suburbs, we're ready to respond to your emergency 24/7.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Areas We Cover</h3>
+                <div className="area-grid">
+                  <div className="area-card">
+                    <h3>Downtown Tampa</h3>
+                    <p>Quick response times for commercial and residential properties in the heart of Tampa.</p>
+                  </div>
+                  <div className="area-card">
+                    <h3>South Tampa</h3>
+                    <p>Serving Hyde Park, Carrollwood, and South Tampa neighborhoods.</p>
+                  </div>
+                  <div className="area-card">
+                    <h3>North Tampa</h3>
+                    <p>Emergency plumbing for North Tampa and surrounding communities.</p>
+                  </div>
+                  <div className="area-card">
+                    <h3>East Tampa</h3>
+                    <p>Fast service for East Tampa and the surrounding areas.</p>
+                  </div>
+                  <div className="area-card">
+                    <h3>West Tampa</h3>
+                    <p>Professional plumbing service for West Tampa residents.</p>
+                  </div>
+                  <div className="area-card">
+                    <h3>Suburbs</h3>
+                    <p>We also serve surrounding suburbs and communities within our service radius.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container content-section">
+                <h2>Not in our service area?</h2>
+                <p>If your address is outside our typical service area, call us anyway! We may be able to accommodate your request, especially for emergencies. Our dispatcher can let you know availability and estimated response time.</p>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Is Your Home in Our Service Area?</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>Call us now and ask if we can serve your location. If yes, we'll get a plumber to you fast.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Check Service Area</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

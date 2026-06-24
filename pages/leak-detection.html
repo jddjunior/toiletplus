@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leak Detection & Repair in Tampa, FL | Toilet Plus</title>
+  <meta name="description" content="Professional leak detection services in Tampa. We find slab leaks, pinhole leaks, and underground water leaks before they damage your home. Same-day service available.">
+  <meta property="og:title" content="Leak Detection Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Find hidden water leaks before they cause damage. Professional detection and repair.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+    .process-step { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); }
+    .process-step h4 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .process-step p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Professional Leak Detection</h1>
+                <p>Mystery water spot? Spike on your water bill? We use advanced technology to trace slab leaks and pinhole leaks before they wreck your drywall and foundation.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Why Professional Leak Detection Matters</h2>
+                <p>A small leak hidden in your walls or foundation can cause thousands of dollars in damage if left undetected. Our plumbers use thermal imaging and acoustic detection to find leaks precisely without invasive digging.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Our Leak Detection Methods</h3>
+                <div className="process-grid">
+                  <div className="process-step">
+                    <h4>Acoustic Detection</h4>
+                    <p>Pinpoint underground leaks by listening for escaping water sounds.</p>
+                  </div>
+                  <div className="process-step">
+                    <h4>Thermal Imaging</h4>
+                    <p>Detect temperature differences from leaking water lines.</p>
+                  </div>
+                  <div className="process-step">
+                    <h4>Pressure Testing</h4>
+                    <p>Identify leaks by monitoring system pressure drops.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Common Signs of Water Leaks</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>Unexplained increase in water bill</li>
+                  <li>Soft spots or wet areas in yard</li>
+                  <li>Water stains on ceilings or walls</li>
+                  <li>Musty odors in home</li>
+                  <li>Cracks in foundation</li>
+                  <li>Mold or mildew growth</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Find & Fix Water Leaks Fast</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>Don't let hidden leaks damage your home. We use advanced detection to find leaks precisely.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

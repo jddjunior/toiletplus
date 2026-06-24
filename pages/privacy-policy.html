@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Toilet Plus</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .header-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; }
+    .header-section h1 { font-family: var(--font-display); font-size: 36px; font-weight: 900; margin: 0; }
+    .content-section { padding: 60px 0; font-size: 15px; line-height: 1.8; color: var(--text-body); }
+    .content-section h2 { font-size: 24px; font-weight: 800; margin: 40px 0 16px; margin-top: 40px; }
+    .content-section h3 { font-size: 16px; font-weight: 700; margin: 24px 0 12px; }
+    .content-section p { margin: 0 0 16px; }
+    .content-section ul { margin: 0 0 16px; padding-left: 24px; }
+    .content-section li { margin-bottom: 8px; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="header-section">
+              <div className="container">
+                <h1>Privacy Policy</h1>
+              </div>
+            </section>
+
+            <section className="content-section">
+              <div className="container">
+                <p><strong>Last Updated: June 2024</strong></p>
+
+                <h2>Introduction</h2>
+                <p>Toilet Plus ("Company," "we," "us," "our") respects your privacy and is committed to protecting it. This Privacy Policy explains our data practices and your rights.</p>
+
+                <h2>Information We Collect</h2>
+                <h3>Information You Provide</h3>
+                <ul>
+                  <li>Contact information (name, phone number, email address)</li>
+                  <li>Service address and location information</li>
+                  <li>Description of plumbing issues</li>
+                  <li>Payment information</li>
+                  <li>Photos or videos of plumbing problems (if you share them)</li>
+                </ul>
+
+                <h3>Information Collected Automatically</h3>
+                <ul>
+                  <li>Website usage data (pages visited, time spent)</li>
+                  <li>Device information (browser type, IP address)</li>
+                  <li>Location data (if permitted)</li>
+                </ul>
+
+                <h2>How We Use Your Information</h2>
+                <ul>
+                  <li>To provide plumbing services and schedule appointments</li>
+                  <li>To communicate about service status and updates</li>
+                  <li>To process payments</li>
+                  <li>To improve our services and website</li>
+                  <li>To comply with legal obligations</li>
+                  <li>To follow up after service for satisfaction surveys</li>
+                </ul>
+
+                <h2>Information Sharing</h2>
+                <p>We do not sell your personal information. We may share information with:</p>
+                <ul>
+                  <li>Service providers and contractors (payment processors, schedulers)</li>
+                  <li>Insurance companies (if needed for claims)</li>
+                  <li>Legal authorities (if required by law)</li>
+                </ul>
+
+                <h2>Data Security</h2>
+                <p>We use industry-standard security measures to protect your information. However, no online transmission is completely secure. You use our services at your own risk.</p>
+
+                <h2>Your Privacy Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                  <li>Access your personal information</li>
+                  <li>Request corrections to inaccurate data</li>
+                  <li>Request deletion of your data (with exceptions)</li>
+                  <li>Opt out of marketing communications</li>
+                </ul>
+
+                <h2>Cookies</h2>
+                <p>Our website uses cookies to enhance your experience. You can control cookies through your browser settings.</p>
+
+                <h2>Third-Party Links</h2>
+                <p>Our website may contain links to third-party sites. We are not responsible for their privacy practices.</p>
+
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy, contact us at (555) 240-7867 or through our contact form.</p>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

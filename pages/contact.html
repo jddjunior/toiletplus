@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Toilet Plus | Emergency Plumber Tampa</title>
+  <meta name="description" content="Contact Toilet Plus emergency plumbing in Tampa. Call (555) 240-7867 for 24/7 service. Or fill out our contact form and we'll get back to you.">
+  <meta property="og:title" content="Contact Toilet Plus">
+  <meta property="og:description" content="Reach out to Toilet Plus for emergency plumbing service in Tampa. 24/7 availability.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .header-section { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .header-section h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 80px 0; align-items: start; }
+    .content-grid h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .contact-info { font-size: 16px; line-height: 1.8; color: var(--text-body); }
+    .contact-info h3 { margin: 32px 0 12px; font-size: 18px; font-weight: 700; }
+    .contact-info p { margin: 0 0 8px; }
+    .contact-info a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
+    .form-group input,
+    .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-soft); border-radius: var(--radius-sm); font-family: inherit; font-size: 14px; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .submit-btn { width: 100%; padding: 14px; background: var(--color-primary); color: #fff; border: none; border-radius: var(--radius-sm); font-weight: 600; cursor: pointer; font-size: 14px; }
+    .submit-btn:hover { opacity: 0.9; }
+    @media (max-width: 768px) {
+      .header-section h1 { font-size: 36px; }
+      .content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    const { useState } = React;
+    
+    function App() {
+      const [formData, setFormData] = useState({name: '', email: '', phone: '', message: ''});
+      
+      const handleChange = (e) => {
+        setFormData({...formData, [e.target.name]: e.target.value});
+      };
+      
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        alert('Thank you! We will contact you soon.');
+        setFormData({name: '', email: '', phone: '', message: ''});
+      };
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="header-section">
+              <div className="container">
+                <h1>Contact Us</h1>
+                <p style={{fontSize: '18px', lineHeight: '1.6', maxWidth: '600px', color: 'var(--text-on-dark-muted)', margin: 0}}>Need emergency plumbing? Call us now. Or fill out the form and we'll get back to you within 15 minutes.</p>
+              </div>
+            </section>
+
+            <section>
+              <div className="container">
+                <div className="content-grid">
+                  <div className="contact-info">
+                    <h2>Get in Touch</h2>
+                    
+                    <h3>Call Us</h3>
+                    <p><a href="tel:5552407867">(555) 240-7867</a> — Available 24/7 for emergencies</p>
+                    
+                    <h3>Service Hours</h3>
+                    <p>Monday - Sunday: 24 hours<br />
+                    Emergency service available anytime</p>
+                    
+                    <h3>Service Area</h3>
+                    <p>Tampa, FL and surrounding areas<br />
+                    Quick response times guaranteed</p>
+                    
+                    <h3>License</h3>
+                    <p>Florida State Licensed Plumber<br />
+                    License #PL-48217</p>
+                  </div>
+                  
+                  <form onSubmit={handleSubmit}>
+                    <h2>Send us a Message</h2>
+                    <div className="form-group">
+                      <label htmlFor="name">Full Name</label>
+                      <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                    </div>
+                    
+                    <div className="form-group">
+                      <label htmlFor="email">Email Address</label>
+                      <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                    </div>
+                    
+                    <div className="form-group">
+                      <label htmlFor="phone">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+                    </div>
+                    
+                    <div className="form-group">
+                      <label htmlFor="message">Message</label>
+                      <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your plumbing issue..."></textarea>
+                    </div>
+                    
+                    <button type="submit" className="submit-btn">Send Message</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

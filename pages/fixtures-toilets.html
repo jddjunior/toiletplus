@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toilet & Fixture Repair in Tampa, FL | Toilet Plus</title>
+  <meta name="description" content="Running toilets, dripping faucets, loose flanges. We fix and install fixtures same-day. Flat-rate pricing. Available 24/7 in Tampa.">
+  <meta property="og:title" content="Toilet & Fixture Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Toilet repair and fixture installation. Same-day service at flat rates.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+    .service-item { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); }
+    .service-item h4 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .service-item p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Toilet & Fixture Services</h1>
+                <p>Running toilet, dripping faucet, wobbly flange? The small stuff that wastes water and nags at you. We fix it same-day, every time.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Fixture Repairs & Installation</h2>
+                <p>From toilets to sinks, showers to outdoor hose bibs — we repair and install all types of plumbing fixtures. Quick repairs save water and money.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Services We Provide</h3>
+                <div className="services-grid">
+                  <div className="service-item">
+                    <h4>Toilet Repair</h4>
+                    <p>Fix running toilets, weak flushes, leaking tanks, and cracked bowls.</p>
+                  </div>
+                  <div className="service-item">
+                    <h4>Faucet Repair</h4>
+                    <p>Repair dripping kitchen and bathroom faucets. Replace worn cartridges and washers.</p>
+                  </div>
+                  <div className="service-item">
+                    <h4>Shower & Tub</h4>
+                    <p>Fix leaky valves, install new fixtures, repair diverters.</p>
+                  </div>
+                  <div className="service-item">
+                    <h4>Toilet Installation</h4>
+                    <p>Install new toilets with proper sealing and wax rings.</p>
+                  </div>
+                  <div className="service-item">
+                    <h4>Bidet Installation</h4>
+                    <p>Install bidet seats and bidet attachments with all necessary plumbing.</p>
+                  </div>
+                  <div className="service-item">
+                    <h4>Outdoor Hose Bibs</h4>
+                    <p>Install, repair, and winterize outdoor water spigots.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Why You Should Fix Leaking Fixtures</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>A running toilet can waste 200+ gallons of water daily</li>
+                  <li>A dripping faucet wastes 3,000+ gallons per year</li>
+                  <li>Saves money on water and sewer bills</li>
+                  <li>Prevents damage and mold growth</li>
+                  <li>Improves home comfort and functionality</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Fix Those Annoying Fixture Issues</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>Save water and money. We repair and install fixtures same-day at flat rates.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

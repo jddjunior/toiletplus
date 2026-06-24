@@ -1,0 +1,31 @@
+# Toilet Plus Plumbing - robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.pdf$
+Disallow: /*.docx$
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay and request rate
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Sitemap location
+Sitemap: https://toiletplus.com/sitemap.xml
+
+# Additional sitemaps if you have them
+# Sitemap: https://toiletplus.com/sitemap-services.xml
+# Sitemap: https://toiletplus.com/sitemap-blog.xml

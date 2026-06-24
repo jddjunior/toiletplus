@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Toilet Plus</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .header-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; }
+    .header-section h1 { font-family: var(--font-display); font-size: 36px; font-weight: 900; margin: 0; }
+    .content-section { padding: 60px 0; font-size: 15px; line-height: 1.8; color: var(--text-body); }
+    .content-section h2 { font-size: 24px; font-weight: 800; margin: 40px 0 16px; margin-top: 40px; }
+    .content-section h3 { font-size: 16px; font-weight: 700; margin: 24px 0 12px; }
+    .content-section p { margin: 0 0 16px; }
+    .content-section ul { margin: 0 0 16px; padding-left: 24px; }
+    .content-section li { margin-bottom: 8px; }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="header-section">
+              <div className="container">
+                <h1>Terms of Service</h1>
+              </div>
+            </section>
+
+            <section className="content-section">
+              <div className="container">
+                <p><strong>Last Updated: June 2024</strong></p>
+
+                <h2>Agreement to Terms</h2>
+                <p>By requesting services from Toilet Plus, you agree to these Terms of Service. If you do not agree, please do not use our services.</p>
+
+                <h2>Services Provided</h2>
+                <p>Toilet Plus provides professional plumbing services in Tampa, FL. Our technicians are licensed and insured. Services are performed during scheduled appointments.</p>
+
+                <h2>Scheduling & Cancellations</h2>
+                <h3>Scheduling</h3>
+                <ul>
+                  <li>Services are scheduled by appointment</li>
+                  <li>We provide estimated arrival windows</li>
+                  <li>You are responsible for providing access to the property</li>
+                </ul>
+
+                <h3>Cancellations</h3>
+                <ul>
+                  <li>Cancellations must be made 24 hours in advance for a full refund</li>
+                  <li>Late cancellations may incur a cancellation fee</li>
+                  <li>Missed appointments may be subject to a service charge</li>
+                </ul>
+
+                <h2>Pricing & Payment</h2>
+                <ul>
+                  <li>Pricing is provided upfront as a flat rate</li>
+                  <li>Payment is due upon completion of service</li>
+                  <li>We accept cash, credit cards, and digital payments</li>
+                  <li>Financing options are available for qualifying customers</li>
+                </ul>
+
+                <h2>Service Warranty</h2>
+                <p>We warrant our workmanship for 30 days. If a repair fails due to our workmanship (not customer misuse), we will re-perform the work at no charge.</p>
+
+                <h2>Limitations of Liability</h2>
+                <p>Our liability is limited to the amount paid for services. We are not responsible for indirect, incidental, or consequential damages.</p>
+
+                <h2>Property Access</h2>
+                <ul>
+                  <li>You must provide safe access to the work area</li>
+                  <li>We are not responsible for damage to property due to hazardous conditions</li>
+                  <li>Please clear work areas of personal items</li>
+                </ul>
+
+                <h2>Customer Responsibilities</h2>
+                <ul>
+                  <li>Provide accurate information about plumbing issues</li>
+                  <li>Disclose any existing damage or problems</li>
+                  <li>Follow our maintenance recommendations</li>
+                </ul>
+
+                <h2>Disputes & Resolution</h2>
+                <p>If you have a dispute, please contact us within 5 days of service. We will work to resolve the issue promptly.</p>
+
+                <h2>Changes to Terms</h2>
+                <p>We reserve the right to modify these terms at any time. Changes take effect upon posting to our website.</p>
+
+                <h2>Contact</h2>
+                <p>For questions about these terms, contact us at (555) 240-7867 or through our contact form.</p>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

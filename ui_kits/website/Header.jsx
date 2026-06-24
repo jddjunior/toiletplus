@@ -1,6 +1,11 @@
 /* Sticky site header — utility bar + main nav. Exposes window.TPHeader */
 (function () {
-  const NAV = ['Services', 'Why Us', 'Service Area', 'Financing', 'Reviews'];
+  const NAV = [
+    { label: 'Services', href: '/pages/drain-cleaning.html' },
+    { label: 'About', href: '/pages/about.html' },
+    { label: 'Contact', href: '/pages/contact.html' },
+    { label: 'FAQ', href: '/pages/faq.html' },
+  ];
 
   function Header({ onBook }) {
     const { Logo, Button } = window.ToiletPlusDesignSystem_5215f9;
@@ -15,17 +20,17 @@
             React.createElement(Icon, { name: 'ShieldCheck', size: 15, color: '#7FE3B0' }),
             'Licensed, bonded & insured · Lic. #PL-48217'),
           React.createElement('span', { style: { display: 'inline-flex', alignItems: 'center', gap: 18 } },
-            React.createElement('a', { href: '#', style: { color: 'var(--text-on-dark-muted)', textDecoration: 'none', display: 'inline-flex', gap: 6, alignItems: 'center' } },
-              React.createElement(Icon, { name: 'MapPin', size: 14 }), 'Find your location'),
+            React.createElement('a', { href: '/pages/service-area.html', style: { color: 'var(--text-on-dark-muted)', textDecoration: 'none', display: 'inline-flex', gap: 6, alignItems: 'center' } },
+              React.createElement(Icon, { name: 'MapPin', size: 14 }), 'Service Area'),
             React.createElement('a', { href: 'tel:5552407867', style: { color: '#fff', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', gap: 6, alignItems: 'center' } },
               React.createElement(Icon, { name: 'Phone', size: 14, color: 'var(--color-accent)' }),
               React.createElement('span', { style: { fontFamily: 'var(--font-mono)' } }, '(555) 240-7867')))
         )),
       // main bar
       React.createElement('div', { style: { maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 24px', height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between' } },
-        React.createElement(Logo, { size: 36, href: '#' }),
+        React.createElement(Logo, { size: 36, href: '/' }),
         React.createElement('nav', { style: { display: 'flex', gap: 28 } },
-          NAV.map((n) => React.createElement('a', { key: n, href: '#', style: { fontSize: 15, fontWeight: 600, color: 'var(--text-body)', textDecoration: 'none' } }, n))),
+          NAV.map((n) => React.createElement('a', { key: n.label, href: n.href, style: { fontSize: 15, fontWeight: 600, color: 'var(--text-body)', textDecoration: 'none' } }, n.label))),
         React.createElement('div', { style: { display: 'flex', gap: 12, alignItems: 'center' } },
           React.createElement(Button, { variant: 'accent', size: 'sm', iconLeft: React.createElement(Icon, { name: 'CalendarCheck', size: 16 }), onClick: onBook }, 'Book Online'))
       )

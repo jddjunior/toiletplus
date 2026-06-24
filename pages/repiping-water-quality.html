@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repiping & Water Quality in Tampa, FL | Toilet Plus</title>
+  <meta name="description" content="Water line repiping and filtration services in Tampa. Fix low pressure and rusty water. Replace old galvanized pipes. Professional installation available.">
+  <meta property="og:title" content="Repiping & Water Quality Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Improve water pressure and quality. Professional repiping and filtration installation.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 40px 0; }
+    .feature-card { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); border-left: 4px solid var(--color-primary); }
+    .feature-card h4 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .feature-card p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Repiping & Water Quality</h1>
+                <p>Low pressure at the taps? Rusty water? We repipe old galvanized lines and install filtration so every tap runs clean and strong.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Upgrade Your Water System</h2>
+                <p>Older plumbing systems can suffer from low pressure and water quality issues. Galvanized steel pipes corrode over time, affecting both flow and water taste. We install modern piping and filtration solutions.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Our Water Solutions</h3>
+                <div className="features-grid">
+                  <div className="feature-card">
+                    <h4>Full House Repiping</h4>
+                    <p>Replace old galvanized or corroded pipes with modern copper or PEX for better pressure and clean water.</p>
+                  </div>
+                  <div className="feature-card">
+                    <h4>Water Filtration Systems</h4>
+                    <p>Install whole-house or point-of-use filters to remove chlorine, sediment, and contaminants.</p>
+                  </div>
+                  <div className="feature-card">
+                    <h4>Softener Installation</h4>
+                    <p>Reduce hard water buildup on fixtures and in pipes with a quality water softener system.</p>
+                  </div>
+                  <div className="feature-card">
+                    <h4>RO System Installation</h4>
+                    <p>Install reverse osmosis systems for pure drinking water at your kitchen sink.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Signs You Need Repiping or Filtration</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>Low water pressure throughout the house</li>
+                  <li>Rusty, discolored, or foul-smelling water</li>
+                  <li>Pipes more than 50 years old</li>
+                  <li>Galvanized steel pipes (common in older homes)</li>
+                  <li>Hard water causing buildup on fixtures</li>
+                  <li>Water spots and stains on dishes and fixtures</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Upgrade Your Water System Today</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>Get clean water, better pressure, and peace of mind. We design and install complete water solutions.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>

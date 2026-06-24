@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sewer & Main Line Repair in Tampa, FL | Toilet Plus</title>
+  <meta name="description" content="Sewer and main line repair in Tampa. We clear roots, bellies, and breaks. Camera inspection and cleaning available 24/7. Same-day service.">
+  <meta property="og:title" content="Sewer & Main Line Services in Tampa | Toilet Plus">
+  <meta property="og:description" content="Professional sewer and main line cleaning and repair. 24/7 emergency service.">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body { margin: 0; background: var(--surface-page); }
+    .service-header { background: linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%); color: #fff; padding: 80px 24px; }
+    .service-header h1 { font-family: var(--font-display); font-size: 48px; font-weight: 900; margin: 0 0 20px; line-height: 1.2; }
+    .service-header p { font-size: 18px; line-height: 1.6; max-width: 600px; color: var(--text-on-dark-muted); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .section-content { padding: 80px 0; }
+    .section-content h2 { font-family: var(--font-display); font-size: 36px; font-weight: 800; margin: 0 0 24px; }
+    .section-content p { font-size: 16px; line-height: 1.7; color: var(--text-body); margin: 0 0 16px; max-width: 700px; }
+    .issues-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 40px 0; }
+    .issue-card { padding: 24px; background: var(--surface-muted); border-radius: var(--radius-md); border-left: 4px solid var(--color-primary); }
+    .issue-card h4 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .issue-card p { margin: 0; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .cta-section { background: var(--surface-navy); color: #fff; padding: 60px 24px; margin-top: 80px; }
+    .cta-section h3 { font-family: var(--font-display); font-size: 32px; font-weight: 800; margin: 0 0 16px; }
+    .cta-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 768px) {
+      .service-header h1 { font-size: 36px; }
+      .issues-grid { grid-template-columns: 1fr; }
+      .cta-content { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" src="../ui_kits/website/_kit.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Header.jsx"></script>
+  <script type="text/babel" src="../ui_kits/website/Footer.jsx"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" data-presets="env,react">
+    function App() {
+      const { Button } = window.ToiletPlusDesignSystem_5215f9;
+      
+      return (
+        <React.Fragment>
+          <window.TPHeader />
+          <main>
+            <section className="service-header">
+              <div className="container">
+                <h1>Sewer & Main Line Service</h1>
+                <p>Gurgling drains across the house usually mean the main line is backing up. We camera-inspect and clear roots, bellies, and breaks — getting your sewage system flowing again.</p>
+              </div>
+            </section>
+
+            <section className="section-content">
+              <div className="container">
+                <h2>Main Line Problems We Solve</h2>
+                <p>Your main sewer line carries all wastewater from your home to the city system. When it backs up, it affects every drain in your house. We diagnose and fix the root cause.</p>
+                
+                <h3 style={{marginTop: '40px', fontSize: '20px', fontWeight: '700'}}>Common Main Line Issues</h3>
+                <div className="issues-grid">
+                  <div className="issue-card">
+                    <h4>Tree Root Intrusion</h4>
+                    <p>Roots seek water and can penetrate older clay pipes, causing blockages and cracks.</p>
+                  </div>
+                  <div className="issue-card">
+                    <h4>Pipe Bellies</h4>
+                    <p>Settling soil creates sags in the line where waste accumulates and backs up.</p>
+                  </div>
+                  <div className="issue-card">
+                    <h4>Broken Pipes</h4>
+                    <p>Age, ground movement, or corrosion can crack or collapse sewer pipes.</p>
+                  </div>
+                  <div className="issue-card">
+                    <h4>Grease Buildup</h4>
+                    <p>Cooking grease solidifies in pipes, reducing flow and causing blockages.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section style={{background: 'var(--surface-muted)'}}>
+              <div className="container section-content">
+                <h2>Signs of Main Line Problems</h2>
+                <ul style={{fontSize: '16px', lineHeight: '1.8', color: 'var(--text-body)', maxWidth: '700px'}}>
+                  <li>Multiple drains backing up at once</li>
+                  <li>Gurgling sounds from drains or toilet</li>
+                  <li>Sewage smell in home or yard</li>
+                  <li>Soft, soggy patches in yard</li>
+                  <li>Slow draining throughout the house</li>
+                  <li>Recurring clogs despite cleaning</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="cta-section">
+              <div className="container">
+                <div className="cta-content">
+                  <div>
+                    <h3>Main Line Backup? We Fix It Fast</h3>
+                    <p style={{fontSize: '16px', lineHeight: '1.6', marginBottom: '24px'}}>We use camera inspection to see exactly what's wrong, then clear it with hydro-jetting or repair.</p>
+                  </div>
+                  <div style={{display: 'flex', gap: '12px', flexDirection: 'column'}}>
+                    <Button variant="accent" size="lg" style={{width: '100%'}}>Call (555) 240-7867</Button>
+                    <Button variant="on-dark" size="lg" style={{width: '100%'}}>Book Online</Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <window.TPFooter />
+        </React.Fragment>
+      );
+    }
+
+    function boot() {
+      if (window.ToiletPlusDesignSystem_5215f9 && window.TPHeader && window.TPFooter && window.lucide) {
+        ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+      } else {
+        setTimeout(boot, 40);
+      }
+    }
+    boot();
+  </script>
+</body>
+</html>
