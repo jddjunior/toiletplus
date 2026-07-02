@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const service = await getServiceBySlug(params.slug);
   if (!service) return {};
   return {
-    title: service.seoTitle || service.title,
+    title: { absolute: service.seoTitle || service.title },
     description: service.seoDescription || service.summary,
   };
 }
