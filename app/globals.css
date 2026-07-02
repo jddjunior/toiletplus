@@ -59,6 +59,13 @@ img, svg { max-width: 100%; }
   .tp-footer__cta { flex-direction: column !important; align-items: flex-start !important; }
 
   section { padding-left: 0; padding-right: 0; }
+
+  .tp-mobile-cta { display: flex !important; }
+  .tp-main--with-mobile-cta { padding-bottom: 66px; }
+}
+
+@media (max-width: 720px) {
+  .tp-trustbar { justify-content: flex-start !important; overflow-x: auto; flex-wrap: nowrap !important; }
 }
 
 @media (max-width: 640px) {

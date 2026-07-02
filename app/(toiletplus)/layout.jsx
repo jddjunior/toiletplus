@@ -1,6 +1,7 @@
 import { BookingProvider } from './components/BookingProvider';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { MobileCTABar } from './components/MobileCTABar';
 import { SITE, SITE_URL } from '../../lib/site';
 
 export const metadata = {
@@ -58,8 +59,9 @@ export default function ToiletPlusLayout({ children }) {
       />
       <BookingProvider>
         <Header />
-        <main>{children}</main>
+        <main className="tp-main--with-mobile-cta">{children}</main>
         <Footer />
+        <MobileCTABar />
       </BookingProvider>
     </>
   );
