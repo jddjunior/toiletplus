@@ -10,11 +10,11 @@ const description =
 export const metadata = {
   title: 'All Landscaping Services',
   description,
-  alternates: { canonical: '/services' },
+  alternates: { canonical: '/landcareplus/services' },
   openGraph: {
     title: 'All Landscaping Services | LandcarePlus',
     description,
-    url: '/services',
+    url: '/landcareplus/services',
     type: 'website',
   },
 };

@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { SITE, SITE_URL, BASE_PATH } from '../../../lib/site-landcareplus';
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'LandcarePlus — Tampa Landscaping, Done Right',
     template: '%s | LandcarePlus',
