@@ -9,7 +9,7 @@ import { SITE, SITE_URL } from '../../lib/site';
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Toilet Plus — Local Plumbers, Done Right',
+    default: 'Toilet Plus — Tampa Plumbers, Done Right',
     template: '%s | Toilet Plus',
   },
   description: SITE.description,
@@ -18,13 +18,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: 'Toilet Plus — Local Plumbers, Done Right',
+    title: 'Toilet Plus — Tampa Plumbers, Done Right',
     description: SITE.description,
     url: SITE_URL,
   },
   twitter: {
     card: 'summary',
-    title: 'Toilet Plus — Local Plumbers, Done Right',
+    title: 'Toilet Plus — Tampa Plumbers, Done Right',
     description: SITE.description,
   },
 };
@@ -43,6 +43,7 @@ const localBusinessJsonLd = {
   telephone: SITE.phoneHref.replace('tel:', '+1'),
   description: SITE.description,
   priceRange: '$$',
+  areaServed: SITE.areaServed,
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: SITE.ratingValue,

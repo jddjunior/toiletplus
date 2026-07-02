@@ -34,13 +34,13 @@ export function Footer() {
               <div style={{ fontSize: 14 }}>We answer the phone 24/7 &mdash; holidays included.</div>
             </div>
           </div>
-          <Button variant="accent" size="lg" href="tel:5552407867" iconLeft={<Icon name="Phone" size={18} />}>(555) 240-7867</Button>
+          <Button variant="accent" size="lg" href="tel:8135550142" iconLeft={<Icon name="Phone" size={18} />}>(813) 555-0142</Button>
         </div>
       </div>
       <div className="tp-footer__grid tp-container" style={{ padding: '56px 24px 40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr', gap: 40 }}>
         <div className="tp-footer__brand-col">
           <Logo size={34} tone="dark" />
-          <p style={{ fontSize: 14, lineHeight: 1.6, margin: '16px 0 18px', maxWidth: 300 }}>Locally owned plumbers serving the metro and 30 miles out. Upfront pricing, real people, and work we stand behind.</p>
+          <p style={{ fontSize: 14, lineHeight: 1.6, margin: '16px 0 18px', maxWidth: 300 }}>Locally owned plumbers serving Tampa Bay and 30 miles out. Upfront pricing, real people, and work we stand behind.</p>
         </div>
         {COLS.map(([title, links]) => (
           <div key={title}>
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
       <div style={{ borderTop: '1px solid var(--border-on-dark)' }}>
         <div className="tp-container" style={{ padding: '20px 24px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, fontSize: 13 }}>
-          <span style={{ fontFamily: 'var(--font-mono)' }}>&copy; 2026 Toilet Plus Plumbing &middot; Lic. #PL-48217 &middot; Bonded &amp; Insured</span>
+          <span style={{ fontFamily: 'var(--font-mono)' }}>&copy; 2026 Toilet Plus Plumbing &middot; Tampa, FL &middot; Lic. #PL-48217 &middot; Bonded &amp; Insured</span>
         </div>
       </div>
     </footer>

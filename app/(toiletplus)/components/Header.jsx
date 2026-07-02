@@ -26,9 +26,9 @@ export function Header() {
             Licensed, bonded &amp; insured &middot; Lic. #PL-48217
           </span>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 18 }}>
-            <a href="tel:5552407867" style={{ color: '#fff', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', gap: 6, alignItems: 'center' }}>
+            <a href="tel:8135550142" style={{ color: '#fff', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', gap: 6, alignItems: 'center' }}>
               <Icon name="Phone" size={14} color="var(--color-accent)" />
-              <span style={{ fontFamily: 'var(--font-mono)' }}>(555) 240-7867</span>
+              <span style={{ fontFamily: 'var(--font-mono)' }}>(813) 555-0142</span>
             </a>
           </span>
         </div>

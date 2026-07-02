@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-export const alt = 'Toilet Plus — Local Plumbers, Done Right';
+export const alt = 'Toilet Plus — Tampa Plumbers, Done Right';
 
 export default async function OpengraphImage() {
   return new ImageResponse(
@@ -42,7 +42,7 @@ export default async function OpengraphImage() {
           </div>
         </div>
         <div style={{ fontSize: 60, fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.05, maxWidth: 900, display: 'flex' }}>
-          Local plumbers, done right the first time.
+          Tampa's plumbers, done right the first time.
         </div>
         <div style={{ fontSize: 28, color: '#AFC2DC', marginTop: 28, display: 'flex' }}>
           Licensed · Upfront flat-rate pricing · 24/7 emergency service

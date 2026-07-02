@@ -41,7 +41,7 @@ function serviceJsonLd(service) {
       name: service.title,
       description: service.heroDescription || service.summary,
       url: `${SITE_URL}${path}`,
-      areaServed: 'Local metro area',
+      areaServed: 'Tampa Bay, FL',
       provider: { '@type': 'Plumber', name: 'Toilet Plus' },
     },
     {
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }) {
           <p style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--text-on-dark-muted)', maxWidth: 640, margin: '0 0 30px' }}>{service.heroDescription}</p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
             <ServiceCTA label={`Book ${service.title}`} />
-            <Button variant="on-dark" size="lg" iconLeft={<Icon name="Phone" size={18} />} href="tel:5552407867">Call (555) 240-7867</Button>
+            <Button variant="on-dark" size="lg" iconLeft={<Icon name="Phone" size={18} />} href="tel:8135550142">Call (813) 555-0142</Button>
           </div>
         </div>
       </section>

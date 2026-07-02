@@ -18,24 +18,25 @@ export function DesktopQuoteTab() {
         transform: 'translateY(-50%) rotate(-90deg) translateX(50%)',
         transformOrigin: 'right center',
         zIndex: 55,
-        background: 'var(--color-primary)',
+        background: 'var(--color-accent)',
         color: '#fff',
-        border: 'none',
-        borderRadius: '8px 8px 0 0',
-        padding: '12px 20px',
+        border: '2px solid rgba(255,255,255,0.35)',
+        borderBottom: 'none',
+        borderRadius: '10px 10px 0 0',
+        padding: '16px 28px',
         fontFamily: 'var(--font-mono)',
-        fontSize: 13,
-        fontWeight: 700,
+        fontSize: 14.5,
+        fontWeight: 800,
         letterSpacing: '.06em',
         textTransform: 'uppercase',
         cursor: 'pointer',
-        boxShadow: 'var(--shadow-md)',
+        boxShadow: '0 -2px 20px rgba(0,0,0,0.25)',
         alignItems: 'center',
-        gap: 8,
+        gap: 10,
       }}
     >
-      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-        <Icon name="CalendarCheck" size={15} />
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+        <Icon name="CalendarCheck" size={18} />
         Get a free quote
       </span>
     </button>

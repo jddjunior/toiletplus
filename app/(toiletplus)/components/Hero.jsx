@@ -32,7 +32,7 @@ export function Hero() {
             Local, licensed plumbers for drain cleaning, water heaters, leak detection, and sewer lines &mdash; with upfront, flat-rate pricing. Real people, honest answers, no surprise fees.
           </p>
           <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 28 }}>
-            <Button variant="accent" size="lg" iconLeft={<Icon name="Phone" size={18} />} href="tel:5552407867">Call (555) 240-7867</Button>
+            <Button variant="accent" size="lg" iconLeft={<Icon name="Phone" size={18} />} href="tel:8135550142">Call (813) 555-0142</Button>
             <Button variant="on-dark" size="lg" iconLeft={<Icon name="CalendarCheck" size={18} />} onClick={openBooking}>Book online</Button>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -56,7 +56,7 @@ export function Hero() {
           <div style={{ height: 0, borderTop: '2px dashed var(--border-strong)' }} />
           <div style={{ padding: '24px 22px 26px' }}>
             <p style={{ margin: '0 0 18px', fontSize: 14.5, color: 'var(--text-muted)', lineHeight: 1.5 }}>Drop your ZIP and what&rsquo;s wrong &mdash; a real dispatcher texts back availability in minutes.</p>
-            <Input label="ZIP code" icon={<Icon name="MapPin" size={18} />} placeholder="98103" style={{ marginBottom: 16 }} />
+            <Input label="ZIP code" icon={<Icon name="MapPin" size={18} />} placeholder="33602" style={{ marginBottom: 16 }} />
             <Button variant="primary" size="lg" block onClick={openBooking} iconRight={<Icon name="ArrowRight" size={18} />}>Check availability</Button>
             <div style={{ display: 'flex', gap: 18, marginTop: 18, paddingTop: 16, borderTop: '1px solid var(--border-soft)', justifyContent: 'space-between', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               <span style={{ display: 'inline-flex', gap: 6, alignItems: 'center' }}><Icon name="ShieldCheck" size={14} color="var(--green-500)" /> No spam</span>

@@ -61,7 +61,7 @@ export function BookingModal({ onClose }) {
             <option>Something else</option>
           </Select>
           <div style={{ display: 'flex', gap: 16, marginBottom: 22, flexWrap: 'wrap' }}>
-            <Input label="ZIP code" icon={<Icon name="MapPin" size={18} />} placeholder="98103" style={{ flex: 1, minWidth: 140 }} />
+            <Input label="ZIP code" icon={<Icon name="MapPin" size={18} />} placeholder="33602" style={{ flex: 1, minWidth: 140 }} />
             <Select label="Urgency" style={{ flex: 1, minWidth: 140 }}>
               <option>Emergency &mdash; today</option>
               <option>This week</option>
@@ -83,7 +83,7 @@ export function BookingModal({ onClose }) {
           <p style={{ fontSize: 15, color: 'var(--text-muted)', margin: '0 0 20px' }}>We&rsquo;ll confirm a real arrival window &mdash; no phone-tag.</p>
           <Input label="Your name" required placeholder="Jane from Maple St." style={{ marginBottom: 16 }} />
           <div style={{ display: 'flex', gap: 16, marginBottom: 16, flexWrap: 'wrap' }}>
-            <Input label="Mobile" required icon={<Icon name="Phone" size={18} />} placeholder="(555) 240-7867" style={{ flex: 1, minWidth: 160 }} />
+            <Input label="Mobile" required icon={<Icon name="Phone" size={18} />} placeholder="(813) 555-0142" style={{ flex: 1, minWidth: 160 }} />
             <Select label="Best time" style={{ flex: 1, minWidth: 140 }}>
               <option>Morning</option>
               <option>Afternoon</option>
@@ -106,7 +106,7 @@ export function BookingModal({ onClose }) {
       </div>
       <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 28, color: 'var(--text-strong)', margin: '0 0 10px' }}>You&rsquo;re on the schedule</h3>
       <p style={{ fontSize: 16, color: 'var(--text-body)', lineHeight: 1.55, margin: '0 auto 22px', maxWidth: 380 }}>
-        A real dispatcher is reviewing your request now. Watch for a text from <strong>(555) 240-7867</strong> with your arrival window &mdash; usually within 15 minutes.
+        A real dispatcher is reviewing your request now. Watch for a text from <strong>(813) 555-0142</strong> with your arrival window &mdash; usually within 15 minutes.
       </p>
       <div style={{ display: 'flex', gap: 8, justifyContent: 'center', marginBottom: 26, flexWrap: 'wrap' }}>
         <Badge tone="green" icon={<Icon name="ShieldCheck" size={13} />}>Licensed & insured</Badge>

@@ -24,7 +24,7 @@ export function MobileCTABar() {
         boxShadow: '0 -4px 16px rgba(7,30,61,0.25)',
       }}
     >
-      <Button variant="accent" size="md" block iconLeft={<Icon name="Phone" size={16} />} href="tel:5552407867">
+      <Button variant="accent" size="md" block iconLeft={<Icon name="Phone" size={16} />} href="tel:8135550142">
         Call now
       </Button>
       <Button variant="on-dark" size="md" block iconLeft={<Icon name="CalendarCheck" size={16} />} onClick={openBooking}>

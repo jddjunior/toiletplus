@@ -3,9 +3,9 @@ import { ReviewCard } from '../../../components/marketing/ReviewCard';
 import { Section, SectionHead, Icon } from './kit';
 
 const REVIEWS = [
-  [5, 'Water heater died on a Sunday and they had hot water back by dinner. Quoted the price before starting — no games, no Sunday surcharge.', 'Marcus T.', 'Northgate'],
-  [5, 'Snaked a drain two other companies wanted to replace. Saved me about $1,800 and explained exactly what was going on in the line.', 'Priya R.', 'Ballard'],
-  [5, 'Found a slab leak fast, patched the drywall back, and left the place cleaner than they found it. Genuinely kind crew.', 'Dave & Lin', 'Greenwood'],
+  [5, 'Water heater died on a Sunday and they had hot water back by dinner. Quoted the price before starting — no games, no Sunday surcharge.', 'Marcus T.', 'Seminole Heights'],
+  [5, 'Snaked a drain two other companies wanted to replace. Saved me about $1,800 and explained exactly what was going on in the line.', 'Priya R.', 'South Tampa'],
+  [5, 'Found a slab leak fast, patched the drywall back, and left the place cleaner than they found it. Genuinely kind crew.', 'Dave & Lin', 'Carrollwood'],
 ];
 
 export function Reviews() {
@@ -14,7 +14,7 @@ export function Reviews() {
       <SectionHead
         index="06" kicker="Neighbors, not testimonials"
         title="Why folks keep our " accentTitle="number saved."
-        intro='Real reviews from real service calls around the metro. We read every one — the good and the "you missed a spot."'
+        intro='Real reviews from real service calls around Tampa Bay. We read every one — the good and the "you missed a spot."'
       />
       <div className="tp-reviews__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18, marginBottom: 36 }}>
         {REVIEWS.map(([r, q, a, l]) => (
