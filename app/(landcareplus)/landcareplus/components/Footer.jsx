@@ -6,17 +6,18 @@ import { Icon } from './kit';
 
 const COLS = [
   ['Services', [
-    ['Lawn Care & Mowing', '/services/lawn-care-mowing'],
-    ['Landscape Design', '/services/landscape-design-installation'],
-    ['Irrigation Repair', '/services/irrigation-sprinkler-repair'],
-    ['Tree & Shrub Care', '/services/tree-shrub-care'],
-    ['Hardscaping & Pavers', '/services/hardscaping-pavers'],
-    ['Mulch, Sod & Cleanup', '/services/mulch-sod-storm-cleanup'],
+    ['Lawn Care & Mowing', '/landcareplus/services/lawn-care-mowing'],
+    ['Landscape Design', '/landcareplus/services/landscape-design-installation'],
+    ['Irrigation Repair', '/landcareplus/services/irrigation-sprinkler-repair'],
+    ['Tree & Shrub Care', '/landcareplus/services/tree-shrub-care'],
+    ['Hardscaping & Pavers', '/landcareplus/services/hardscaping-pavers'],
+    ['Mulch, Sod & Cleanup', '/landcareplus/services/mulch-sod-storm-cleanup'],
   ]],
   ['Company', [
-    ['All Services', '/services'],
-    ['Why Us', '/#why'],
-    ['Reviews', '/#reviews'],
+    ['All Services', '/landcareplus/services'],
+    ['Guides', '/landcareplus/blog'],
+    ['Why Us', '/landcareplus/#why'],
+    ['Reviews', '/landcareplus/#reviews'],
   ]],
 ];
 

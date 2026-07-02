@@ -18,14 +18,14 @@ export function ServicesSection({ services }) {
             index={String(s.order ?? i + 1).padStart(2, '0')}
             icon={<Icon name={s.icon} size={30} stroke={1.75} />}
             title={s.title}
-            href={`/services/${s.slug}`}
+            href={`/landcareplus/services/${s.slug}`}
           >
             {s.summary}
           </ServiceCard>
         ))}
       </div>
       <div style={{ marginTop: 28, textAlign: 'right' }}>
-        <Link href="/services" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+        <Link href="/landcareplus/services" style={{ color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
           See all services <Icon name="ArrowRight" size={15} />
         </Link>
       </div>

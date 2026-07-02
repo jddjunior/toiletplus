@@ -8,9 +8,10 @@ import { Icon } from './kit';
 import { useBooking } from './BookingProvider';
 
 const NAV = [
-  { label: 'Services', href: '/services' },
-  { label: 'Why Us', href: '/#why' },
-  { label: 'Reviews', href: '/#reviews' },
+  { label: 'Services', href: '/landcareplus/services' },
+  { label: 'Guides', href: '/landcareplus/blog' },
+  { label: 'Why Us', href: '/landcareplus/#why' },
+  { label: 'Reviews', href: '/landcareplus/#reviews' },
 ];
 
 export function Header() {
@@ -34,7 +35,7 @@ export function Header() {
         </div>
       </div>
       <div className="tp-container" style={{ position: 'relative', padding: '0 24px', height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Logo size={36} href="/" />
+        <Logo size={36} href="/landcareplus" />
         <nav aria-label="Primary" className={`tp-header__nav${navOpen ? ' tp-header__nav--open' : ''}`} style={{ display: 'flex', gap: 28 }}>
           {NAV.map((n) => (
             <Link key={n.label} href={n.href} onClick={() => setNavOpen(false)} style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-body)', textDecoration: 'none' }}>

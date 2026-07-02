@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   if (!service) return {};
   const title = service.seoTitle || service.title;
   const description = service.seoDescription || service.summary;
-  const path = `/services/${service.slug}`;
+  const path = `/landcareplus/services/${service.slug}`;
   return {
     title: { absolute: title },
     description,
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 }
 
 function serviceJsonLd(service) {
-  const path = `/services/${service.slug}`;
+  const path = `/landcareplus/services/${service.slug}`;
   const graph = [
     {
       '@type': 'Service',
@@ -47,8 +47,8 @@ function serviceJsonLd(service) {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/landcareplus` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/landcareplus/services` },
         { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}${path}` },
       ],
     },
@@ -81,9 +81,9 @@ export default async function ServicePage({ params }) {
         <div style={{ position: 'absolute', inset: 0, ...blueprint('rgba(255,255,255,0.05)', 32), pointerEvents: 'none' }} />
         <div className="tp-container" style={{ position: 'relative', padding: '48px 24px 64px' }}>
           <nav aria-label="Breadcrumb" style={{ fontSize: 13, marginBottom: 22, color: 'var(--text-on-dark-muted)' }}>
-            <Link href="/" style={{ color: 'var(--text-on-dark-muted)' }}>Home</Link>
+            <Link href="/landcareplus" style={{ color: 'var(--text-on-dark-muted)' }}>Home</Link>
             {' / '}
-            <Link href="/services" style={{ color: 'var(--text-on-dark-muted)' }}>Services</Link>
+            <Link href="/landcareplus/services" style={{ color: 'var(--text-on-dark-muted)' }}>Services</Link>
             {' / '}
             <span style={{ color: '#fff' }}>{service.title}</span>
           </nav>
@@ -147,7 +147,7 @@ export default async function ServicePage({ params }) {
           <SectionHead index="+" kicker="Related work" title="Often paired with " accentTitle="this job." align="left" titleSize={32} />
           <div className="tp-services__grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}>
             {service.relatedServices.map((r) => (
-              <ServiceCard key={r._id} icon={<Icon name={r.icon} size={30} stroke={1.75} />} title={r.title} href={`/services/${r.slug}`}>
+              <ServiceCard key={r._id} icon={<Icon name={r.icon} size={30} stroke={1.75} />} title={r.title} href={`/landcareplus/services/${r.slug}`}>
                 {r.summary}
               </ServiceCard>
             ))}

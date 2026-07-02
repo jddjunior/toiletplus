@@ -41,7 +41,7 @@ export default async function ServicesIndexPage() {
               index={String(s.order ?? i + 1).padStart(2, '0')}
               icon={<Icon name={s.icon} size={30} stroke={1.75} />}
               title={s.title}
-              href={`/services/${s.slug}`}
+              href={`/landcareplus/services/${s.slug}`}
             >
               {s.summary}
             </ServiceCard>
