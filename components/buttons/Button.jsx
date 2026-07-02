@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 /* Inject a component's CSS once per document. Lets DS components carry real

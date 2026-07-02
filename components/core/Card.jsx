@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 /** Generic surface card — hairline border, cool-tinted shadow, soft radius.

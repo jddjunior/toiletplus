@@ -1,0 +1,118 @@
+@import '../styles.css';
+
+/* ---------------------------------------------------------------
+   Mobile-responsive layer. The component library above was built
+   with fixed multi-column grids for desktop; these rules retarget
+   the same CSS custom properties / grid classes at tablet & phone
+   widths without touching per-component token styling.
+   ---------------------------------------------------------------- */
+
+img, svg { max-width: 100%; }
+
+.tp-hamburger {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text-strong);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .tp-header__nav { display: none !important; }
+  .tp-header__nav--open {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column !important;
+    background: #fff;
+    padding: 20px 24px;
+    gap: 16px !important;
+    border-bottom: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-md);
+  }
+  .tp-hamburger { display: flex; }
+  .tp-header__book-label { display: none; }
+
+  .tp-hero__grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .tp-hero__title { font-size: clamp(38px, 9vw, 68px) !important; }
+  .tp-hero__section { padding: 44px 0 56px !important; }
+
+  .tp-specstrip__grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .tp-services__grid,
+  .tp-reviews__grid { grid-template-columns: 1fr !important; }
+
+  .tp-guarantees__grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .tp-guarantees__items { grid-template-columns: 1fr !important; }
+
+  .tp-sectionhead__grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .tp-sectionhead__title { font-size: clamp(28px, 7vw, 46px) !important; }
+
+  .tp-footer__grid { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; }
+  .tp-footer__brand-col { grid-column: 1 / -1; }
+  .tp-footer__cta { flex-direction: column !important; align-items: flex-start !important; }
+
+  section { padding-left: 0; padding-right: 0; }
+
+  .tp-mobile-cta { display: flex !important; }
+  .tp-main--with-mobile-cta { padding-bottom: 66px; }
+}
+
+@media (max-width: 720px) {
+  .tp-trustbar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch !important;
+    overflow-x: visible;
+    flex-wrap: wrap;
+    gap: 10px !important;
+  }
+  .tp-trustbar__item {
+    font-size: 13px !important;
+    white-space: normal;
+    background: var(--surface-muted);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tp-trustbar { grid-template-columns: 1fr !important; }
+}
+
+@keyframes tp-quote-tab-pulse {
+  0%, 100% { box-shadow: 0 -2px 20px rgba(0,0,0,0.25), 0 0 0 0 rgba(255,77,77,0.55); }
+  50% { box-shadow: 0 -2px 20px rgba(0,0,0,0.25), 0 0 0 9px rgba(255,77,77,0); }
+}
+
+@media (min-width: 961px) {
+  .tp-desktop-quote-tab {
+    display: flex !important;
+    animation: tp-quote-tab-pulse 2.4s ease-in-out infinite;
+  }
+  .tp-desktop-quote-tab:hover { animation-play-state: paused; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tp-desktop-quote-tab { animation: none !important; }
+}
+
+@media (max-width: 640px) {
+  .tp-services__grid { grid-template-columns: 1fr !important; }
+  .tp-footer__grid { grid-template-columns: 1fr !important; }
+  .tp-guarantees__inner { grid-template-columns: 1fr !important; }
+  h1 { font-size: clamp(32px, 10vw, 44px); }
+  h2 { font-size: clamp(26px, 7vw, 34px); }
+}
+
+@media (max-width: 480px) {
+  .tp-specstrip__grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .tp-footer__grid { grid-template-columns: 1fr !important; }
+}
