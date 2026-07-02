@@ -1,4 +1,5 @@
 import { getServiceSlugs } from '../lib/sanity';
+import { getServiceSlugs as getLandcareServiceSlugs } from '../lib/sanity-landcareplus';
 import { SITE_URL } from '../lib/site';
 
 export default async function sitemap() {
@@ -9,11 +10,18 @@ export default async function sitemap() {
     slugs = [];
   }
 
-  const staticRoutes = ['', '/services'].map((path) => ({
+  let landcareSlugs = [];
+  try {
+    landcareSlugs = await getLandcareServiceSlugs();
+  } catch {
+    landcareSlugs = [];
+  }
+
+  const staticRoutes = ['', '/services', '/landcareplus', '/landcareplus/services'].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
-    changeFrequency: path === '' ? 'weekly' : 'weekly',
-    priority: path === '' ? 1 : 0.8,
+    changeFrequency: 'weekly',
+    priority: path === '' || path === '/landcareplus' ? 1 : 0.8,
   }));
 
   const serviceRoutes = slugs.map((s) => ({
@@ -23,5 +31,12 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const landcareServiceRoutes = landcareSlugs.map((s) => ({
+    url: `${SITE_URL}/landcareplus/services/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...landcareServiceRoutes];
 }

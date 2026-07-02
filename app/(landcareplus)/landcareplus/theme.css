@@ -1,0 +1,48 @@
+/* LandcarePlus theme — overrides the shared design-token primitives only
+   within this subtree. Semantic aliases (--color-primary, --text-strong,
+   --surface-navy, etc.) are defined once in the root globals.css as
+   var(--blue-500) etc., and CSS custom properties re-resolve dynamically
+   at the point of use — so overriding the primitives here is enough to
+   retheme every shared component (Button, Card, ServiceCard, ...). */
+
+.lp-theme {
+  /* ---- Brand green scale (kept as --blue-* to match shared component tokens) ---- */
+  --blue-50:  #EAF5EC;
+  --blue-100: #D2EAD6;
+  --blue-200: #A6D5AE;
+  --blue-300: #78BF83;
+  --blue-400: #4EA75B;
+  --blue-500: #2E8B3D; /* primary */
+  --blue-600: #257530;
+  --blue-700: #1D5C29; /* dark green */
+  --blue-800: #16431F;
+  --blue-900: #0F2E16; /* deep forest — footer, hero overlays */
+
+  /* ---- Accent: warm terracotta/orange (urgency, storm cleanup CTA) ---- */
+  --red-50:  #FFF1E8;
+  --red-100: #FFE0CC;
+  --red-300: #FFAD7A;
+  --red-500: #F2762E; /* accent */
+  --red-600: #D65F1C;
+  --red-700: #B34A13;
+
+  /* ---- Neutral / warm-tinted gray ---- */
+  --gray-0:   #FFFFFF;
+  --gray-50:  #FAF8F3;
+  --gray-100: #F0ECE2;
+  --gray-200: #E1DACB;
+  --gray-300: #C7BFA9;
+  --gray-400: #9C927A;
+  --gray-500: #726A55;
+  --gray-600: #4F4938;
+  --gray-700: #383326;
+  --gray-800: #211E16;
+  --gray-900: #0F0D09;
+
+  --green-500: #1FA463;
+  --green-50:  #E6F6EE;
+  --amber-500: #E8920A;
+  --amber-50:  #FCF1DD;
+
+  --text-on-dark-muted: #C7DCC5;
+}
