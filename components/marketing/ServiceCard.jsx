@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 /** A single plumbing service — flat spec-card with a mono index, line icon,
