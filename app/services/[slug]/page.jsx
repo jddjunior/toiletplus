@@ -5,6 +5,7 @@ import { ServiceCard } from '../../../components/marketing/ServiceCard';
 import { Button } from '../../../components/buttons/Button';
 import { Section, SectionHead, Icon, blueprint } from '../../components/kit';
 import { ServiceCTA } from '../../components/ServiceCTA';
+import { SITE_URL } from '../../../lib/site';
 
 export const revalidate = 60;
 
@@ -20,10 +21,49 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const service = await getServiceBySlug(params.slug);
   if (!service) return {};
+  const title = service.seoTitle || service.title;
+  const description = service.seoDescription || service.summary;
+  const path = `/services/${service.slug}`;
   return {
-    title: { absolute: service.seoTitle || service.title },
-    description: service.seoDescription || service.summary,
+    title: { absolute: title },
+    description,
+    alternates: { canonical: path },
+    openGraph: { title, description, url: path, type: 'website' },
   };
+}
+
+function serviceJsonLd(service) {
+  const path = `/services/${service.slug}`;
+  const graph = [
+    {
+      '@type': 'Service',
+      serviceType: service.title,
+      name: service.title,
+      description: service.heroDescription || service.summary,
+      url: `${SITE_URL}${path}`,
+      areaServed: 'Local metro area',
+      provider: { '@type': 'Plumber', name: 'Toilet Plus' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+        { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}${path}` },
+      ],
+    },
+  ];
+  if (service.faqs && service.faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: service.faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    });
+  }
+  return { '@context': 'https://schema.org', '@graph': graph };
 }
 
 export default async function ServicePage({ params }) {
@@ -32,6 +72,11 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd(service)) }}
+      />
       <section style={{ position: 'relative', background: 'linear-gradient(165deg, #0B3D7E 0%, #071E3D 72%)', color: '#fff', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, ...blueprint('rgba(255,255,255,0.05)', 32), pointerEvents: 'none' }} />
         <div className="tp-container" style={{ position: 'relative', padding: '48px 24px 64px' }}>

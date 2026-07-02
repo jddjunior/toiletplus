@@ -4,10 +4,19 @@ import { Section, SectionHead, Icon } from '../components/kit';
 
 export const revalidate = 60;
 
+const description =
+  'Drain cleaning, water heaters, leak detection, sewer & main line, fixtures & toilets, repiping & water quality — licensed, flat-rate, same-day.';
+
 export const metadata = {
   title: 'All Plumbing Services',
-  description:
-    'Drain cleaning, water heaters, leak detection, sewer & main line, fixtures & toilets, repiping & water quality — licensed, flat-rate, same-day.',
+  description,
+  alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'All Plumbing Services | Toilet Plus',
+    description,
+    url: '/services',
+    type: 'website',
+  },
 };
 
 export default async function ServicesIndexPage() {

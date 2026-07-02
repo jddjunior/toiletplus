@@ -35,7 +35,7 @@ export function Header() {
       </div>
       <div className="tp-container" style={{ position: 'relative', padding: '0 24px', height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Logo size={36} href="/" />
-        <nav className={`tp-header__nav${navOpen ? ' tp-header__nav--open' : ''}`} style={{ display: 'flex', gap: 28 }}>
+        <nav aria-label="Primary" className={`tp-header__nav${navOpen ? ' tp-header__nav--open' : ''}`} style={{ display: 'flex', gap: 28 }}>
           {NAV.map((n) => (
             <Link key={n.label} href={n.href} onClick={() => setNavOpen(false)} style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-body)', textDecoration: 'none' }}>
               {n.label}
