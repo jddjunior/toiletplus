@@ -29,7 +29,7 @@ export function HomeFAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <SectionHead
-        index="04" kicker="Common questions"
+        index="08" kicker="Common questions"
         title="Straight answers, " accentTitle="before you call."
       />
       <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 820 }}>

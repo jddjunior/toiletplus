@@ -39,7 +39,7 @@ export function OffersSection() {
   return (
     <Section tone="page">
       <SectionHead
-        index="04" kicker="Current offers"
+        index="07" kicker="Current offers"
         title="A few ways to " accentTitle="save right now."
         intro="Real discounts, no fine print. Mention the code when you book."
       />

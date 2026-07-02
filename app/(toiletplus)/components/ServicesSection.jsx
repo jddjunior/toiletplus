@@ -7,7 +7,7 @@ export function ServicesSection({ services }) {
   return (
     <Section id="services" tone="muted">
       <SectionHead
-        index="01" kicker="What we fix"
+        index="02" kicker="What we fix"
         title="Plumbing services, done right " accentTitle="the first time."
         intro="From a dripping faucet to a full repipe — residential and light commercial. If it carries water, we work on it."
       />

@@ -15,7 +15,7 @@ export function Guarantees() {
       <div className="tp-guarantees__grid tp-container" style={{ position: 'relative', display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 56 }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: 18 }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: 'var(--color-accent)', letterSpacing: '.08em' }}>02</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: 'var(--color-accent)', letterSpacing: '.08em' }}>04</span>
             <Stamp tone="onDark" tick={false}>The Toilet Plus promise</Stamp>
           </div>
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 46, lineHeight: 1.02, letterSpacing: '-0.02em', color: '#fff', margin: '0 0 18px' }}>

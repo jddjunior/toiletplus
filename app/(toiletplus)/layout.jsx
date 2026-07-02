@@ -1,7 +1,9 @@
 import { BookingProvider } from './components/BookingProvider';
+import { UrgencyRibbon } from './components/UrgencyRibbon';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MobileCTABar } from './components/MobileCTABar';
+import { DesktopQuoteTab } from './components/DesktopQuoteTab';
 import { SITE, SITE_URL } from '../../lib/site';
 
 export const metadata = {
@@ -58,10 +60,12 @@ export default function ToiletPlusLayout({ children }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
       <BookingProvider>
+        <UrgencyRibbon />
         <Header />
         <main className="tp-main--with-mobile-cta">{children}</main>
         <Footer />
         <MobileCTABar />
+        <DesktopQuoteTab />
       </BookingProvider>
     </>
   );

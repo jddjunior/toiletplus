@@ -68,6 +68,10 @@ img, svg { max-width: 100%; }
   .tp-trustbar { justify-content: flex-start !important; overflow-x: auto; flex-wrap: nowrap !important; }
 }
 
+@media (min-width: 961px) {
+  .tp-desktop-quote-tab { display: flex !important; }
+}
+
 @media (max-width: 640px) {
   .tp-services__grid { grid-template-columns: 1fr !important; }
   .tp-footer__grid { grid-template-columns: 1fr !important; }

@@ -12,7 +12,7 @@ export function Reviews() {
   return (
     <Section id="reviews">
       <SectionHead
-        index="03" kicker="Neighbors, not testimonials"
+        index="06" kicker="Neighbors, not testimonials"
         title="Why folks keep our " accentTitle="number saved."
         intro='Real reviews from real service calls around the metro. We read every one — the good and the "you missed a spot."'
       />
