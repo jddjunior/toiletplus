@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Pre-existing Toilet Plus design-system asset library at repo root —
+    // not part of this Next.js app.
+    "_ds_bundle.js",
+    "components/**",
+    "ui_kits/**",
+    "guidelines/**",
   ]),
 ]);
 

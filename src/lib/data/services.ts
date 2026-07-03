@@ -96,6 +96,7 @@ export const services: Service[] = [
       "Equipment check for storm damage",
       "Priority scheduling for existing weekly customers",
       "Flat storm-cleanup rate, quoted before we start",
+      "Pre-season equipment check offered every May, ahead of hurricane season",
     ],
     keywords: [
       "hurricane pool cleanup Pompano Beach",

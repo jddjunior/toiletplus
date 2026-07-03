@@ -127,6 +127,9 @@ export function Footer() {
             <Link href="/service-areas" className="hover:text-white">
               Service Areas
             </Link>
+            <Link href="/gallery" className="hover:text-white">
+              Gallery
+            </Link>
             <Link href="/faq" className="hover:text-white">
               FAQ
             </Link>

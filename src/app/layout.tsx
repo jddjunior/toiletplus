@@ -60,9 +60,10 @@ export const metadata: Metadata = {
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "Organization"],
   "@id": `${siteUrl}/#business`,
   name: business.name,
+  logo: `${siteUrl}/opengraph-image`,
   description:
     "Weekly pool cleaning, green pool recovery, equipment repair, and storm cleanup serving Pompano Beach and Broward County, FL.",
   url: siteUrl,
