@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-inter);
+
+  --color-brand-50: #eefbfd;
+  --color-brand-100: #d6f3f8;
+  --color-brand-200: #ade7f2;
+  --color-brand-300: #7ad6e8;
+  --color-brand-400: #3fbdd9;
+  --color-brand-500: #1aa1c2;
+  --color-brand-600: #12809f;
+  --color-brand-700: #106681;
+  --color-brand-800: #10526a;
+  --color-brand-900: #0b3347;
+  --color-brand-950: #071f2c;
+
+  --color-sun-300: #ffe1a3;
+  --color-sun-400: #ffcb66;
+  --color-sun-500: #ffb020;
+  --color-sun-600: #f2900a;
+  --color-sun-700: #c96f04;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-brand-950);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+.wave-mask {
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path d='M0 40 C 240 90 480 -10 720 40 C 960 90 1200 -10 1440 40 L1440 80 L0 80 Z' fill='black'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'><path d='M0 40 C 240 90 480 -10 720 40 C 960 90 1200 -10 1440 40 L1440 80 L0 80 Z' fill='black'/></svg>");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
